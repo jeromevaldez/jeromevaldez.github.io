@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>IDES 252</title>
+	
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <!-- font awesome styles for icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <!-- my css styles -->
+    <link rel="stylesheet" href="css/idea.css">
+
+    
+</head>
+<body>
+    <div class="text-center top-nav"><a href="index.html"><i class="fa fa-home"></i></a></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>HTML &amp; <a href="#css">CSS</a></h1>
+                <h2>HTML - Hypertext Markup Language</h2>
+                <h3>Semantics</h3>
+                <p>HTML is a markup language. It defines the meaning of the pieces of content on a page. </p>
+                <h3>Tags you should know</h3>
+                <p>I have listed a few key tags below, but a <a href="http://www.w3schools.com/tags/default.asp">comprehensive list of tags can be found here</a>.</p>
+                <table class="table table-default">
+                	<thead>
+                		<tr>
+                			<th>Tag</th>
+                			<th>What it means</th>
+                			<th>Syntax</th>
+                		</tr>
+                	</thead>
+                	<tbody>
+	                	<tr>
+	                		<td>p</td>
+	                		<td>paragraph</td>
+	                		<td><code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code</td>
+	                	</tr>
+	                	<tr>
+	                		<td>h1 - h6</td>
+	                		<td>Highest to lowest levels of headers</td>
+	                		<td><code>&lt;h1&gt;This is a first level header&lt;/h1&gt;</code></td>
+	                	</tr>
+	                	<tr>
+	                		<td>a</td>
+	                		<td>anchor tag - use for hyperlinks</td>
+	                		<td><code>&lt;a href="http://google.com"&gt;This is an anchor tag for links&lt;/a&gt;</code></td>
+	                	</tr>
+	                	<tr>
+	                		<td>img</td>
+	                		<td>Image</td>
+	                		<td><code>&lt;img src="img/cute-cat.jpg" alt="Cute cat"&gt;</code> Note that the image tag does not come in pairs with an opening and closing. It is only a single tag.</td>
+	                	</tr>
+	                	<tr>
+	                		<td>table, and all the tags that fall within a table: thead (header section), tbody (table body), tr (rows), td (columns), th (columns in the thead section)</td>
+	                		<td>Table tags</td>
+	                		<td>
+	                			<code>
+									&lt;table&gt;<br>
+										&nbsp;&nbsp;&lt;tr&gt;<br>
+											&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br>
+											&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br>
+										&nbsp;&nbsp;&lt;/tr&gt;<br>
+									&lt;/table&gt;<br>
+	                			</code>
+	                		</td>
+	                	</tr>
+	                	<tr>
+	                		<td>div</td>
+	                		<td>Division. Usually a block-level element.</td>
+	                		<td><code>&lt;div&gt; ... something goes here ... &lt;/div&gt;</code></td>
+	                	</tr>
+	                	<tr>
+	                		<td>span</td>
+	                		<td>An inline element, usually used to separate or style inline content differently from the content surrounding it.</td>
+	                		<td><code>&lt;p&gt;This is an example of &lt;span&gt;how a span is used&lt;/span&gt;&lt;/p&gt; </code></td>
+	                	</tr>
+	                	<tr>
+	                		<td>ul and ol, with li</td>
+	                		<td>Unordered lists and ordered lists. Using ordered lists places a number or letter for each list element (you can control whether it's a number of letter).</td>
+	                		<td>
+	                			<code>
+	                				&lt;ul&gt;<br>
+	                				&nbsp;&nbsp;&lt;li&gt;First list item&lt;/li&gt;<br>
+	                				&nbsp;&nbsp;&lt;li&gt;Second list item&lt;/li&gt;<br>
+	                				&nbsp;&nbsp;&lt;li&gt;Third list item&lt;/li&gt;<br>
+	                				&lt;/ul&gt;<br>
+	                			</code>
+	                		</td>
+	                	</tr>
+	                	<!--<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td></td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td></td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td></td>
+	                	</tr>
+	                	<tr>
+	                		<td></td>
+	                		<td></td>
+	                		<td></td>
+	                	</tr>-->
+	                </tbody>
+                </table>
+                <section id="css">
+                <h2>CSS - Cascading Style Sheets</h2>
+                <p>CSS is used to define how things look. More specifically, it defines how the pieces of content defined by HTML structure should look.</p>
+                <p><a href="http://www.w3schools.com/css/css_syntax.asp">This page has a great, short introduction to CSS syntax.</a> Please go read it. You need to know the key concepts of selectors, declarations, properties, values, and css comments.</p>
+                <p>We will also cover these CSS topics:</p>
+                <ul>
+                	<li>Three ways to insert CSS. Inline, external css files, internal page styles on the page</li>
+                	<li>
+                		Common CSS properties you'll use very often
+                		<ul>
+                			<li>color (for font colors)</li>
+                			<li>font-size</li>
+                			<li>font-family</li>
+                			<li>borders</li>
+                			<li>margin</li>
+                			<li>padding</li>
+                			<li>display</li>
+                			
+                		</ul>
+                	</li>
+                	<li>Common CSS style tricks that you'll use very often
+                		<ul>
+                			<li>Making lists into horizontal navigation</li>
+                			<li>Controlling styles for hyperlinks</li>
+                			<li>Basic font styles</li>
+                			<li>Aligning text left, right, and "center" (US spelling works in CSS, not British/Canadian spelling)</li>
+                		</ul>
+                	</li>
+                </ul>
+                
+                <h2>Activities for class</h2>
+                <p>First, create a page according to some detailed instructions. Then work in groups of 4 or 5 - one of your group will explain how they built the page and what each of the elements means. Then one person from your group will be chosen to explain how you built your page to the class as well. </p>
+                <h3>Make a small website of three pages, all linked together with a common menu made from a list. Pretend it's for a small coffee shop or restaurant. Home - Menu - About</h3>
+                <h3>Make a long scrolling page with headers and images - preferably to tell some kind of story. Use anchor tags to move from one part of the page to another (link back to top and link to a section). If you don't use a story, also pretend that it's for a small restaurant or coffee shop.</h3>
+                <h3>Make a small indie band website with 3-4 pages.</h3>
+                <h3></h3>
+                </section>
+            </div><!-- end .col-md-12 -->
+        </div><!-- end .row -->
+        
+    </div><!-- end .container -->
+    <footer><footer>
+    	<p><a href="index.html"><i class="fa fa-home"></i></a></p>
+    </footer></footer>
+
+    
+<!-- start scripts -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- end scripts -->    
+</body>
+</html>

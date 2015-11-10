@@ -1,0 +1,72 @@
+body {
+
+}
+.top-nav {
+    margin-top:0px;
+    margin-bottom: 0px;
+    /*background-color: lightpink;*/
+    background-color: #fff;
+}
+.top-nav a {
+    display:block;
+    padding: 0;
+    height: 150px;
+    font-size: 1.5em;
+    /*color: white;*/
+    color: #fff;
+	background: url('../img/field-of-poppies.jpg') center center repeat-x;
+}
+.top-nav a:hover {
+	/*color:#efefef;*/
+	color: #000;
+	text-decoration: none;
+}
+
+.welcome-well {
+    margin-top:20px;
+}
+p, ul {
+    font-family: "PT serif", Georgia, serif;
+    font-size: 20px;
+}
+blockquote {
+    font-style: italic;
+}
+footer {
+	/*background-color: lightpink;*/
+	background-color: red;
+	margin-top: 40px;
+    margin-bottom:0;
+
+	text-align: center;
+}
+footer a {
+	/*color: #fff;*/
+	color: #f39e5f;
+	display: block;
+	padding-top: 30px;
+	padding-bottom: 30px;
+    	background: url('../img/field-of-poppies.jpg') center center repeat-x;
+
+}
+a {
+/*	color: #a6621b;*/
+    color: #C50D03;
+}
+a:hover {
+	background-color: ;
+	color: #C50D03;
+}
+.panel-info {
+	border-color: #86562b;
+}
+.panel-info > .panel-heading {
+	background-color: #C50D03;
+	color: #fff;
+}
+
+i {
+	visibility: hidden;
+}
+
+

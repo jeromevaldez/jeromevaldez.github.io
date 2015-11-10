@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>IDES 252</title>
+	
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <!-- font awesome styles for icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <!-- my css styles -->
+    <link rel="stylesheet" href="css/idea.css">
+
+    
+</head>
+<body>
+    <div class="text-center top-nav"><a href="index.html"><i class="fa fa-home"></i></a></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>In the beginning ... (of the internet)</h1>
+                <hr>
+                <h2>What is the internet? How did we get here?</h2>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <strong>Want to know more?</strong>
+                    </div>
+                    <div class="panel-body">
+                        <a href="http://www.dontfeartheinternet.com/">Don't fear the internet</a> is a fine website that gives you an entertaining version of this material.
+                    </div>
+                </div>
+                <p><em>The following content has been generously provided by Matt Anderson, a colleague who used to teach in IDEA and the Interactive Design program. Thanks Matt!</em></p>
+                <h3>The Internet!</h3>
+                <p>I’d like to start by clarifying the distinction between the Internet and the World Wide Web. The Internet was invented in the 1960s by an American military research group named the Defense Advanced Research Projects Agency (DARPA)—yes, we have the US military to thank for the Internet. This was during the Cold War, when the US was focused on defending themselves from a nuclear missile attack by the Soviet Union. They were working on a number of critical projects at military and university research facilities located across the US, collaborating by sharing information through what were essentially phone lines—if a lab in Vermont, let’s say, had to share a file with a lab in New Mexico, they would create a direct wire connection through switches located along a route between the two labs (all phone calls worked that way at the time: physical wires were connected by mechanical switches).</p>
+                <p>The heightened anxiety stemming from nuclear threat led scientists to realize that this communications system was vulnerable: a nuclear strike at the right location could cut off communication between two collaborating labs completely, hobbling the US’ progress in the arms race. So a new way of sharing computer information was invented, in which the file or data to be shared was divided into small chunks, and each chunk was given the address of the intended destination. These “packets” were then sent into the network, where they would travel from switch to switch until they arrived at their destination, to be reassembled into the original file—and the route they took didn’t matter. This meant that single nodes of the network could be destroyed without harming the data’s capability to move through any part of the network to reach its destination. This new kind of data transmission was enabled by TCP/IP (Transmission Control Protocol/Internet Protocol): its invention was essentially the invention of the Internet, and it powers your computer’s Internet connectivity today.</p>
+                <p>So the Internet is a system of physical connections—wires, fibre optic cables, microwave antennas, satellites, routers, switches—and protocols like TCP/IP that allow computers to communicate over those connections.</p>
+                <h3>The World Wide Web</h3>
+                <p>The World Wide Web (let’s just call it the web from now on) was born much later, in 1990. Interestingly, it was invented by one guy: one extraordinary and legendary guy. Tim Berners-Lee was an English physicist working at a particle physics laboratory in Switzerland when he (and his team—OK, maybe it was more than one guy) invented HTTP (Hypertext Transfer Protocol) and HTML (Hypertext Markup Language), the building blocks of the web . The web of 1990 was just the latest of many services that ran on the Internet: there were already several Internet services available such as email, file transfers and newsgroups. The web was really a very simple service: you used a client program called a “browser” (think Chrome) to request a file from a server program, which then sent you the file. The big breakthrough built into HTML was that parts of that file could link to other files, allowing you to browse with ease (or “surf,” although no-one has adequately explained how you surf through a web) from file to file in a linked web of information.</p>
+                <p>Now, of course, the web is the most important communication medium in the world. Well done, Mr. Berners-Lee.</p>
+                <p>We’re not going to learn anything about HTTP in this course; that stuff is for back-end web developers (more about that below). We will be learning a thing or two about HTML though.</p>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <strong>Working with aluminium</strong>
+                    </div>
+                    <div class="panel-body">
+                        A <a href="https://deardesignstudent.com/working-with-aluminium-503b9d4a5c44">short article</a> about why it's important to know the fundamentals of the medium you're working with.
+                    </div>
+                </div>
+                <h3>The URL</h3>
+                <p>When we refer to bits of HTML “linking” to other files on the web, we’re talking about our old friend the Uniform Resource Locator. This helpful little item provides a way to describe the exact location of every single file on the Internet—every email message, web page, video, designer’s CV in PDF form—every file, of the trillions of files out there, has a unique URL. You encounter these every day, most often in the address bar at the top of your browser window. Let’s examine a URL:</p>
+                <p><em>http://trailers.apple.com/trailers/independent/dontbeafraidofthedark/index.html</em></p>
+                <p>URLs generally consist of these four parts:</p>
+            	<ul>
+            		<li>the protocol (the http:// part in this case, since it’s an HTTP URL; in other cases, it may be feed:// or ftp:// or file:// or another protocol)</li>
+            		<li>the host address (the trailers.apple.com part)</li>
+            		<li>the directory structure (the nested folders /trailers/independent/dontbeafraidofthedark/— these are optional, since the file might be right at the top [“root”] level of the server rather than in a folder)</li>
+            		<li>the filename (index.html)</li>
+            	</ul>
+            	<p>The host address has its own technical wrinkle. Because TCP/IP finds a computer or device on the Internet through its numerical IP address (you’ll find your computer’s IP address in the Network part of your System Preferences), when you point your browser to trailers.apple.com, it needs to connect to 77.67.85.10 to get the content. That’s great for computers—they love numbers!—but an address like that is not very people-friendly. Fortunately, your browser can make use of the Domain Name Service (DNS), which takes the host address you typed in and looks it up in a giant database to find the required IP address. That’s one of the first things your browser must do before you can access any website, and if DNS is ever unavailable for any reason, your browser thinks the whole web has disappeared.</p>
+            	<p>URLs have some restrictions as far as the characters that can be used in them (more on why that’s important later):</p>
+            	<pre>Disallowed characters in URLs: TAB SPACE " < > [ ] \ ^ ` { } |</pre>
+            	<pre>Special characters in URLs: % # / ? : ; @ = & ~ +</pre>
+            	
+            	<h3>The Site!</h3>
+            	<p>The websites you create will simply consist of a folder containing some files (and likely other subfolders). The folder structure of your site can be an aid to organization and production. Folders should have simple one-word names (or multi-word names can be faked by replacing spaces with the underscore character—see “disallowed characters” above). In the root directory of your site (“root” is the common name for the top-level directory of a website) you’ll place an HTML document named “index.html”—this is the homepage, the first page visitors see when they arrive at your site.  NOTE: This filename is set in stone, and is used because Unix-based HTTP servers are conventionally configured to look for a document called “index.html” when no filename is specified by the browser making the request. When you ask Safari to go to fertilizer.ca for instance, the server returns the document at the URL http://fertilizer.ca/index.html.</p>
+                <p>You’ll probably also have several other HTML documents in that folder, although you might choose to place them inside folders which you’ve given names appropriate to the section of your site to which those documents belong. This is for your own convenience, since a large site can become a mass of files in no time and it gets difficult to find what you’re looking for. NOTE: Every file must have a filename extension, such as .html, .css, .js, .gif, .png. Folders shouldn’t have a filename extension.</p>
+                <p>You’ll also likely have a folder named “images.” Inside this folder, you’ll place all of the image files referenced by index.html and by any other pages. You might also place folders for images inside the organization subfolders discussed above, and have different sections’ images in different places. By the way: using short names for files and folders leads to a small savings in download time for your site. Instead of “images” for the folder name, why not use “i” or “img”? It’s not a problem to name the folder that way; “images” is not set in stone.</p>
+                
+                <h3>The Back End!</h3>
+                <p>I tried to think of a one-word descriptor for this section, but I failed—but this stuff is universally known as the “back end” anyway. The back end refers to technological solutions to the needs of very large and/or very frequently updated websites. A collection of HTML files and image files is fine for a very small website, but think of creating a site like amazon.com—there are hundreds or thousands of items there, with new ones being added (or removed) daily. They also have information about thousands of customers, allowing them to log in, add shipping addresses, add items to their shopping cart, etc. When a website needs this kind of complex content and functionality, you’d need a gigantic army of well-trained, poorly paid web page authors to manage it if it were made up of static HTML files.</p>
+                <p>Instead, the content of the site—every page—is abstracted out of the HTML markup and stored in a powerful database running on the server. When a visitor makes a request for a page—homepage, product category page, product detail page, search results page, address book page, any page—a program running on the server requests the needed content from the database, plugs it into an HTML template, and then sends the results off to the visitor’s browser as an HTML document (the browser has no idea that the page didn’t start out as a static file).</p>
+                <p>As I mentioned, a database is required to accomplish this kind of power: the most common database server on the web is MySQL (http://mysql.com/), largely because it’s open source (free!) and excellent. Accompanying the database, a programming language is used to create the functionality that works with the database to add, modify and retrieve content: the most commonly-used language is PHP (http://php.net/—it stands for PHP: Hypertext Pre-Processor; don’t ask) since it’s open source and excellent.</p>
+                <p>Designing for the kind of websites we’ve just discussed requires anticipating and accommodating frequently-changing content, building the necessary flexibility into the design: chunks of the page may need to get taller or shorter, or more or fewer of certain elements may need to be displayed, as the visitor views different parts of the site. Generally speaking, designers need to embrace change and flexibility when designing for the web, for many reasons, particularly this one: the very vehicle for the design—the browser window—is a flexible environment beyond our control. Users can choose to change their browser window width and height, their type sizes and faces, and colours. Designing websites is often more like designing software than designing a poster or magazine. And believe it or not, if you decide you want to become a web designer, you will come to see that as a good thing.</p>
+                
+                <h3>The Front End!</h3>
+                <p>As you know from your work in your UX course, the web design is traditionally begun as a sketch, then worked into wireframes using a tool like OmniGraffle or Illustrator, then turned into a set of polished visual mockups using Photoshop or Fireworks. Once those are completed and approved by the client, production on the site begins: images are exported as the smallest, most highly optimized versions possible (more on that later in the course), and the necessary pages are created using HTML, CSS (Cascading Style Sheets) and JavaScript, the “three-legged stool” of web design:</p>
+                <div id="threeLeggedStool" class="text-center">
+                	<img src="img/three-legged-stool.png">
+                	<em>(thank goodness it’s not a two-legged stool: those things are really tippy)</em>
+                </div>
+                <p>HTML is, as previously mentioned, a markup language that provides the structural skeleton of the content: its purpose is to define the role or meaning of each part of the document, through the use of tags. For instance, a paragraph tag, with content between an opening and closing p tag:</p> 
+                <pre>&lt;p&gt;This is a paragraph&lt;/p&gt;</pre>
+                <p>It declares such things as: a certain chunk forms the page’s masthead; another bit forms the footer; this chunk provides the page’s primary navigation, consisting of a list of links; this bit is the main heading for the page; this is a sub-heading for this section; this is a login form; this is a caption for an image—hopefully you get the idea. A big part of learning HTML is learning the correct tag to use in a particular situation, known as the semantics of HTML. HTML is also used to create links, and to bring images and other media into the document’s content.</p>
+                <p>What HTML is not meant to do is to define how things look: that’s the job of CSS. Cascading Style Sheets has been around for a long time (CSS2 was released in 1998); it’s a presentation language that was invented as a way of giving web designers some real power above and beyond the ugly HTML hacks that they relied on during the 90s. CSS provides control over layout, type styling and formatting, and background images, through the use of rules:</p>
+                <pre>
+p	{
+	margin: 0;
+	padding: 0;
+	color: #7F0026;
+	background-color: #DDDDDD;
+}
+                </pre>
+                <p>This is a CSS rule. The part before the opening curly brace is known as the selector — this part defines what part of the page gets the style (in this case p, i.e., the HTML paragraph element). The part within the curly braces is a declaration block. This consists of, in this case, four declarations. Each declaration consists of a CSS property and its value, separated by a colon and ending with a semicolon. This rule states that a paragraph’s background should be light grey, the text colour should be dark red, and the paragraph itself should have no padding or margins around its four sides. Don’t let those funky codes for the colours worry you: we’ll be using Dreamweaver’s and Photoshop’s help to get those. We’ll be authoring pages using CSS2 for the most part, with maybe a sprinkle or two of CSS3.</p>
+                <p>JavaScript  is a programming language that is used to add or enhance behaviour of elements in a web page. When you type “tarsier” into Google’s search field and a vertical list of clickable options appears under the field, it’s JavaScript doing that. JavaScript is a bit outside of the scope of this course, although we’ll probably look at a few easy JavaScript tricks that Dreamweaver can do.</p>
+                
+                <!--<h3>The Editor!</h3>
+                <p>There are a kabillion different tools for authoring websites, from the very simple to the complex and full-featured. If you’re a glutton for punishment, you can create all of your HTML, CSS and JavaScript files using TextEdit on your Mac: that’s because all three of those file types are simple text files. Fortunately, we don’t have to do that, because we have Adobe Dreamweaver, which is a WYSIWYG (what you see is what you get, pronounced “whizzy-wig”) editor that allows us to compose webpages using a visual environment. Dreamweaver is among the best of this sort of tool, and it is very good.</p>
+                <p>When you first open Dreamweaver (DW), because it’s a Creative Suite (or Creative Cloud) product, you’ll see a fairly typical user interface: lots of panels on the right, a Properties panel at bottom, and the Welcome Screen. Before we create anything, let’s set up a quick preference. Choose Dreamweaver > Preferences (Command-U). In the New Document category, make sure the Default Document Type is set to HTML 5 and click OK (HTML5 is the latest version of the language, so why not use it?). Now in the welcome screen, click Create New : HTML. Save the new file as index.html in a new folder somewhere sensible (like maybe inside a “class 1” folder for this course). Don’t worry too much about permanence since this is just for practice, but this kind of thing is a good organizational habit to adopt.</p>
+                <p>Now the user interface is mostly occupied by the document window. At the top centre is the title field: a page’s title is extremely important and should never be left as “Untitled Document,” and not only because it screams “amateur hour”—the words found in the title are very helpful for users, and critical for search engines. (If you’re in Dreamweaver CC 2014, choose Window menu > Workspace Layout > Design and you’ll find this in the Properties panel.) Let’s type “Amazing Web Site | Home” in there (the vertical bar character is just to the right of the right curly brace on the keyboard), then hit Return (DW likes it if you hit Return when typing in fields). Save the file. Now look for the button at the top of the document window that looks like a little globe: the Preview/Debug button. Use it to preview your page in Safari (or your favourite browser) and view your handiwork: a blank page. But your title should be displayed in your browser’s title bar—if it’s not there, you may have forgotten to save the file after typing the title.</p>
+                <p>Now type a line of text into the document: “A Big Deal,” then press Return and type a second line of text: “The web is huge, but it’s made up of a lot of really small bits of content like these.” Now preview again, and you’ll see your two lines of content in the browser. Back in DW, if you place the cursor inside these two lines, your Properties panel’s Format picker will show you that each is a paragraph (you must be in the HTML part of the Properties panel for this). Now click anywhere inside the first line, and use the Properties panel’s Format picker to change that line to a “Heading 1.” What just happened is that Dreamweaver changed the tag of the first block from a <code>&lt;p&gt;</code> tag to an <code>&lt;h1&gt;</code> tag, the tag for the highest level of heading (the heading tags are <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>). </p>
+				<p>It’s important to keep in mind that this isn’t technically a visual change, it’s a structural change. We’ve just declared that that first block of text isn’t meant to be an ordinary paragraph, it’s meant to be the most important heading on the page. The visual change (bigger, bolder) results from the fact that, even though we haven’t created any CSS rules to define the style of the content, this content is not unstyled. All browsers use a built-in CSS stylesheet to declare some default styles for all HTML elements, and DW is reflecting this in the way it displays the heading and paragraph.</p>
+				<p>Now have a look at the bottom left of the document window, where you’ll find a highly useful widget: the tag selector. If you click the cursor in the first line in the document, your tag selector will tell you that your cursor is inside an h1 tag, which is inside the body . You can click on either of those items in the tag selector to select the tag and all its content. If you click the cursor in the second line in the document, the tag selector tells you that the cursor is inside a p tag, which is inside the body.</p>
+				<p>Let’s add a new tag to the structure. Double-click the word “huge” in the second line to select it, and use the B button in the Properties panel to make it bold. Again, this isn’t a visual change, but a structural one: we’ve just declared that the word “huge” is a bit of content that should be strongly emphasized, by surrounding it with a <strong></strong> tag. Because browsers have a default style rule for the strong tag, the result is a bold visual weight. NOTE: making text bold or italic using the two buttons in the Properties panel are the only visual changes we should ever make using that panel! Any other style changes should be accomplished with CSS rules in our stylesheet (see below).</p>
+				<p>If you click inside the word “huge” now, the tag selector will show you that your cursor is inside a strong tag, which is inside a p tag, which is inside the body (by the way, I’ll be using the word “element” to refer to these things as well, which indicates the tag plus the content it contains). That’s the way HTML works, for the most part: tags that contain other tags, which contain other tags, which contain other tags, which contain content, in a branching tree structure (I also use the analogy of those nesting Russian dolls).</p>
+				<p></p>-->
+                
+                
+                
+            </div><!-- end .col-md-12 -->
+        </div><!-- end .row -->
+        
+    </div><!-- end .container -->
+    <footer>
+    	<p><a href="index.html"><i class="fa fa-home"></i></a></p>
+    </footer>
+
+    
+<!-- start scripts -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- end scripts -->    
+</body>
+</html>

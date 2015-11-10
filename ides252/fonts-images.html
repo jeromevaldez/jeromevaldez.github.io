@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>IDES 252</title>
+	
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <!-- font awesome styles for icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <!-- my css styles -->
+    <link rel="stylesheet" href="css/idea.css">
+
+    
+</head>
+<body>
+    <div class="text-center top-nav"><a href="index.html"><i class="fa fa-home"></i></a></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>The Box Model</h1>
+                <p>I covered this briefly in class, and <a href="http://www.dontfeartheinternet.com/08-layout/">this video</a> repeats the basics of the box model (plus a few other useful concepts for layout).</p>
+                <h1>Fonts on the web</h1>
+                <h2>Does the user have to install the font on their computer?</h2>
+                <p>Nope. We can use web fonts. But before we get to web fonts, we should learn some typography basics for the web. <a href="http://www.dontfeartheinternet.com/07-web-typography/">This video does a great job.</a></p>
+                
+                <h2>Web fonts - what are they and how do I use them?</h2>
+                <p>"Unlike web safe fonts, web fonts are not pre-installed on the user's system. The fonts are downloaded by the user's browser while rendering the webpage, and then applied to your text. The main drawbacks of using web fonts is it will slow your site's load time ... If a browser is unable to use the web font it will fall back on the web safe fonts in the stack." - from <a href="http://www.cssfontstack.com/Web-Fonts"> cssfontstack.com</a></p>
+                
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <strong>Web Fonts in 2015</strong>
+                    </div>
+                    <div class="panel-body">
+                        You should check out this article - <a href="http://www.digitalartsonline.co.uk/features/interactive-design/web-fonts-what-designers-need-to-know-in-2015/">Web fonts: what designers need to know in 2015.</a>
+                    </div>
+                </div>
+                
+                <p>Web safe fonts can be found <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">over here</a>. They are your fallback fonts if the web fonts are causing you trouble. Honestly, there aren't many of them and they're pretty boring.</p>
+                <h3>How to use Web Fonts on your sites</h3>
+                <h4>Step 1: Pick a Web Font</h4>
+                <p>You should go find a font that you want to use. There are many freely available ones on <a href="https://www.google.com/fonts">Google Fonts</a>. There are also several web fonts that you need to pay a license fee to use. The most popular are hosted by services such as <a href="http://fontdeck.com/">Fontdeck</a>, <a href="https://typekit.com/">TypeKit</a>, <a href="http://www.fonts.com/">Fonts.com</a>, and <a href="http://www.typography.com/cloud/welcome/">Hoefler &amp; Co.’s Cloud.typography.</a></p>
+                <h4>Step 2: Add some stylesheet link to the html pages on which you want to use the font</h4>
+                <p>You'll insert a snippet like the below within the <code>&lt;head&gt;</code> tags of your webpage</p>
+                <code>
+                	&lt;link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'&gt;
+                </code>
+                
+                <h4>Step 3: Apply the font in your css file</h4>
+                <p>The css rule below is saying that every h1 element should use the Robot font, but if that's not available for some reason, then fall back to use Arial, and if that doesn't work, fall back to use the system's default sans-serif font. 
+                
+                	<pre><code>
+h1 {
+	font-family: 'Roboto', 'Arial', 'sans-serif';
+}
+                	</code></pre>
+                
+                
+                <h1>Images on the web</h1>
+                <h2>How large can my images be?</h2>
+                <p>A good rule of thumb for e-commerce sites is to keep product images under 70kb. If you're working on other types of sites, you might be able to get away with larger. Your portfolio sites might have images in the 200kb range. Remember though, smaller is faster and faster is better when it comes to digital. And by smaller I mean file size not the visual scale on the page.</p>
+                <h2>How can I shrink my images, but still maintain their quality?</h2>
+                <p>The tools within your Adobe products include saving for the web. You'll likely use Photoshop to do this with your design and illustration portfolio projects. I am assuming that your other courses have covered the steps to do this already. You can experiment with the quality and size settings to get an image that is small, but of acceptable quality.</p>
+                <p>There are some online services that can take one of your large images and optimize it.</p>
+                <ul>
+                	<li><a href="https://kraken.io/">Kraken.io</a></li>
+                	<li><a href="http://www.jpegmini.com/">JPEG Mini</a></li>
+                	<li><a href="http://www.imgopt.com/">Smush.it</a></li>
+                	<li><a href="https://tinypng.com/">Tiny PNG</a></li>
+                </ul>
+                                
+                <h3>Here are some guidelines for producing images for the web</h3>
+                <p>I found three articles that I think describe image optimization well.</p>
+                <p>The first is <a href="http://inobscuro.com/tutorials/optimizing-images-for-web-35/">a basic primer.</a></p>
+                <p>The second goes into a <a href="http://blog.teamtreehouse.com/optimize-images-web">bit more detail.</a></p>
+                <p>The third goes into <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization?hl=en">even more detail.</a> It was written by a Google developer, and it's very thorough.</p>
+                <p>I would ask that you read those three articles in succession to get a solid understanding of image optimization. Please aim to understand these concepts, which should be repeated in each article.</p>
+                <ul>
+                	<li>Vector vs. Raster</li>
+                	<li>Lossy vs. Lossless formats</li>
+                	<li>SVG</li>
+                	<li>JPG</li>
+                	<li>GIF</li>
+                	<li>PNG (both PNG-8 and PNG-24)</li>
+                </ul>
+                
+                
+                <h2>Inserting background images using HTML and CSS</h2>
+                <p>You'll sometimes want to place an image as a background instead of inside the flow of the document. Here's how:</p>
+                <p>First you'll need to define the html block that will contain the background image. This usually is a div, but you can do this to most html block-level tags. Then you'll apply css rules to that block. The best way (in general) to do this is by giving the block a class, like so <code>&lt;div class="bgimage"&gt;some content goes here&lt;/div&gt;</code></p>
+                <p>Now you'll create a css rule that applies your chosen background image to the block.</p>
+                <pre>
+                	<code>
+.bgimage {
+	background-image: url("img/pumpkins.jpg");
+}
+                	</code>
+                </pre>
+                <p>Within the same rule, you can make other declarations such as:</p>
+                <p><code>background-repeat: no-repeat or repeat-x or repeat-y;</code> this will cause your background image to not repeat, or repeat horizontally, or repeat vertically.</p>
+                <p><code>background-position: right top;</code> this will cause your background image to be positioned relative to the box in which it's contained. In the rule I just wrote, it will be positioned at the top right of the block in which it's contained. The different ways you can state background-position can be found <a href="http://www.w3schools.com/cssref/pr_background-position.asp">on this page.</a></p>
+                
+                
+            </div><!-- end .col-md-12 -->
+        </div><!-- end .row -->
+        
+    </div><!-- end .container -->
+    <footer><footer>
+    	<p><a href="index.html"><i class="fa fa-home"></i></a></p>
+    </footer></footer>
+
+    
+<!-- start scripts -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- end scripts -->    
+</body>
+</html>
