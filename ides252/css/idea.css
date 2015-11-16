@@ -69,4 +69,34 @@ i {
 	visibility: hidden;
 }
 
+/* css rules for html5 background video */
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+.xl-header {
+    font-size: 200px;
+    color: #fff;
+    text-align: left;
+}
+.intro {
+    font-size: 70px;
+    margin-top: 300px;
+    background-color: #efefef;
+}
+.section1 {
+    background-color: #000199;
+    font-size: 100px;
+    color: #fff;
+}
 
