@@ -95,8 +95,9 @@ video#bgvid {
     background-color: #efefef;
 }
 .section1 {
-    background-color: #000199;
+    background-color: #000;
     font-size: 100px;
     color: #fff;
+    opacity: 0.5;
 }
 
