@@ -4,11 +4,9 @@
 <head>
 	<!-- The charset meta tag tells the browser which character encoding set it should use. Just use utf-8 for now. -->
     <meta charset="utf-8"> 
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- The viewport metatag his lets developers control the viewport's size and scale. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- The description meta tag describes your page to search engines. -->
 	<meta name="description" content="This is Jerome's demo site for IDES252. We are learning about breakpoints!">
@@ -24,15 +22,46 @@
     
     <!-- We can also write page-specific styles in the head tags. This is not usually recommended unless you're testing something out. -->
     <style>
-        .main-content {
-            
+        /* These first styles before the @media statement will apply to the content by default until they are overriden by @media. */
+        body {
+            font-size: 1.3em;
         }
+        .main-content {
+            background-color: #efefef;
+        }
+        .sidebar {
+            background-color: aquamarine;
+        }
+        nav {
+            text-align: center;
+        }
+        /* The following styles will apply to the content when the viewport is 800px or greater. */
+        @media (min-width: 800px) {
+            body {
+                font-size: 1.7em;
+            }
+            .main-content {
+                display: inline-block;
+                width: 60%;
+            }
+            .sidebar {
+                display: inline-block;
+                width: 38%;
+                vertical-align: top;
+            }
+            
+        } /* this curly bracket closes the @media rules */
     </style>
     
 </head>
 
 <!-- The body is where all of your main content should go. -->
 <body>
+    <nav>
+        <h1>
+            A Food Blog About Food
+        </h1>
+    </nav>
     <div class="main-content">
         <h1>
             A Pulled Pork Nightmare
