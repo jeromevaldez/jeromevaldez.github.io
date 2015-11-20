@@ -14,7 +14,7 @@ body {
     font-size: 1.5em;
     /*color: white;*/
     color: #fff;
-	background: url('../img/field-of-poppies.jpg') center center repeat-x;
+	background: url() center center repeat-x #ccc;
 }
 .top-nav a:hover {
 	/*color:#efefef;*/
@@ -46,7 +46,7 @@ footer a {
 	display: block;
 	padding-top: 30px;
 	padding-bottom: 30px;
-    	background: url('../img/field-of-poppies.jpg') center center repeat-x;
+    background: url() center center repeat-x #ccc;
 
 }
 a {
