@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>IDES 252</title>
+	
+    <!-- Latest compiled and minified CSS -->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    
+    <!-- font awesome styles for icons -->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+    
+    <!-- my css styles -->
+<!--    <link rel="stylesheet" href="css/idea.css">-->
+    <style>
+        .parallax {
+            -webkit-perspective:1px;
+            perspective:1px;/* The perspective CSS property determines the distance between the z=0 plane and the user in order to give to the 3D-positioned element some perspective. Each 3D element with z>0 becomes larger; each 3D-element with z<0 becomes smaller. The strength of the effect is determined by the value of this property. Taken from this page https://developer.mozilla.org/en/docs/Web/CSS/perspective */
+            height:100vh; /* The vh unit of measure is a percentage of the viewport height. */
+            overflow-x:hidden;
+            overflow-y:auto; /*Setting overflow-y: auto will allow the content inside the element to scroll in the usual way, but now descendant elements will be rendered relative to the fixed perspective. This is the key to creating the parallax effect.*/
+        }
+        .parallax-group {
+            position:relative; /* Used to allow the child parallax-layer elements to be positioned relative to the group element. */
+            height:100vh;/*fills each group to 100% of the viewport height. */
+            transform-style:preserve-3d; /*prevents the browser from flattening the .parallax-layer elements.*/
+            
+        }
+        .parallax-layer {
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+        }
+        .parallax-layer-base {
+            -webkit-transform:translateZ(0);
+            transform:translateZ(0);
+            background-color: ;
+/*            border: solid 1px blue;*/
+        }
+        .parallax-layer-back {
+            -webkit-transform:translate(-1px);
+            transform:translateZ(-1px) scale(2); /* The translateZ property is . The scale property allows us to correct for depth. Because as we move items along the Z axis farther away from us, we end up getting shrinking those elements. We scale them back up to get them to the right size. The scale factor can be calculated with 1 + (translateZ * -1) / perspective. For example, if our viewport perspective is set to 1px and we translate an element -2px along the Z axis the correction scale factor would be 3. This is taken from the tutorial content here http://keithclark.co.uk/articles/pure-css-parallax-websites/ */
+            background-color: blue;
+        }
+        .parallax-layer {
+            padding:60vh 0;
+        }
+        h1 {
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%, -50%);
+        }
+    </style>
+
+    
+</head>
+<body>
+    <div class="parallax">
+        <div class="parallax-group">
+            <div class="parallax-layer parallax-layer-back">
+            <h1>
+                PLX Layer Back
+            </h1>
+            </div>
+            <div class="parallax-layer parallax-layer-base">
+                <h1>
+                    Base Parallax Layer
+                </h1>
+            </div>
+        </div>
+        <div class="parallax-group">
+            <div class="parallax-layer parallax-layer-back">
+            <h1>
+                PLX Layer Back - second group
+            </h1>
+            </div>
+            <div class="parallax-layer parallax-layer-base">
+                <h1>
+                    Base Parallax Layer second group
+                </h1>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>

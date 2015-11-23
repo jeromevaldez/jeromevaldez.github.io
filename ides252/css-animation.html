@@ -10,13 +10,13 @@
 	<title>CSS Animation - IDES 252</title>
 	
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
     
     <!-- font awesome styles for icons -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
     
     <!-- my css styles -->
-    <link rel="stylesheet" href="css/idea.css">
+<!--    <link rel="stylesheet" href="css/idea.css">-->
 
     <style>
         @keyframes snowfall {
@@ -31,21 +31,19 @@
                 top:0px;
                 left:50px;
             }
-            50% {
-                background-color: #eee;
-                top:0;
-                left:100px;
+*/            65% {
+                background-color: #666;
             }
-*/
+
             100% {
                 background-color: #fff;
-                top:0;
-                left:200px;
+                top:600px;
+                left:0px;
             }
         }
         div.snowfall {
-            height:100px;
-            width:100px;
+            height:50px;
+            width:50px;
             background-color:#000;
             position:relative;
             animation-name:snowfall;
@@ -55,26 +53,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>CSS Animations</h1>
-                
-                <div class="snowfall"></div>
-            
-            </div><!-- end .col-md-12 -->
-        </div><!-- end .row -->
-        
-    </div><!-- end .container -->
-
-
-    
-<!-- start scripts -->
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-<!-- jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!-- end scripts -->    
+    <h1>CSS Animations</h1>
+    <div class="snowfall"></div>    
 </body>
 </html>
