@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- this is the doctype declaration for HTML5 -->
+<html lang="en">
+<!-- The head is where a bunch of meta information goes. It's also where links to stylesheets go. Stylesheet links should not be placed within the body tags. -->
+<head>
+	<!-- The charset meta tag tells the browser which character encoding set it should use. Just use utf-8 for now. -->
+    <meta charset="utf-8"> 
+    
+    <!-- The viewport metatag his lets developers control the viewport's size and scale. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- The description meta tag describes your page to search engines. -->
+	<meta name="description" content="A demo page for web forms">
+	
+    <!-- The author meta tag describes the author of the page to search engines. -->
+    <meta name="author" content="Jerome Valdez">
+	
+    <!-- The title tag is the stuff that shows up as the tab label or the window label in your browser -->
+	<title>basic form example - IDES 252</title>
+	
+    <!-- Stylesheet links are usually inserted below. List the stylesheets in an order that makes sense. The style sheets on top can be overridden by the ones beneath. -->
+    <link rel="stylesheet" href="">
+    
+    <!-- We can also write page-specific styles in the head tags. This is not usually recommended unless you're testing something out. -->
+    <style>
+        body {
+            font-family:sans-serif;
+            font-size:16px;
+        }
+        input {
+/*            height: 45px;*/
+            background-color: azure;
+            border: solid 1px black;
+        }
+        label {
+/*            display:block;*/
+        }
+        
+    </style>
+</head>
+
+<!-- The body is where all of your main content should go. -->
+<body>
+    <form class="form-example" action="do-something.php">
+        <fieldset>
+            <legend>
+                General info:
+            </legend>
+           <label for="firstname">First Name *</label> <!--labels are inline not block elements by default-->
+            <!-- input tags are also inline by default, not block -->
+            <input type="text" name="firstname" value="Jerome"><br>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password"><br>
+            <label for="bigp">Tell me about yourself</label><br>
+            <textarea name="bigp" rows="10" cols="50">This is where the content goes.</textarea><br>
+            <label>
+                <input type="checkbox"> Check this out
+            </label><br>
+            <label>Male</label>
+            <input type="radio" name="male"><br>
+            <label>Where are you from?</label>
+            <select>
+                <option value="north">North</option>
+                <option value="south" selected>South</option>
+                <option value="east">East</option>
+                <option value="west">West</option>
+            </select>
+        </fieldset>
+        
+    </form>
+</body>
+    
+</html>

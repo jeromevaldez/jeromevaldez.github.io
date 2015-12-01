@@ -1,0 +1,121 @@
+<!DOCTYPE html> <!-- this is the doctype declaration for HTML5 -->
+<html lang="en">
+<!-- The head is where a bunch of meta information goes. It's also where links to stylesheets go. Stylesheet links should not be placed within the body tags. -->
+<head>
+	<!-- The charset meta tag tells the browser which character encoding set it should use. Just use utf-8 for now. -->
+    <meta charset="utf-8"> 
+    
+    <!-- The viewport metatag his lets developers control the viewport's size and scale. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- The description meta tag describes your page to search engines. -->
+	<meta name="description" content="A demo page for web forms">
+	
+    <!-- The author meta tag describes the author of the page to search engines. -->
+    <meta name="author" content="Jerome Valdez">
+	
+    <!-- The title tag is the stuff that shows up as the tab label or the window label in your browser -->
+	<title>basic form example - IDES 252</title>
+	
+    <!-- Stylesheet links are usually inserted below. List the stylesheets in an order that makes sense. The style sheets on top can be overridden by the ones beneath. -->
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="">
+    
+    <!-- We can also write page-specific styles in the head tags. This is not usually recommended unless you're testing something out. -->
+    <style>
+        .pwd {
+            width:50%;
+        }
+        
+    </style>
+</head>
+
+<!-- The body is where all of your main content should go. -->
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">&nbsp;</div>
+        <div class="col-md-6">
+            <h1>
+                My first bootstrap form
+            </h1>
+            <hr>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input id="name" class="form-control" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input class="form-control" type="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input id="password" class="form-control pwd" type="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="aboutyou">Tell me about yourself</label>
+                    <textarea rows="5" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <p>
+                        What do you love?
+                    </p>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Puppies
+                        </label>    
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Kittens
+                        </label>    
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Pigs
+                        </label>    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p>
+                        How are you feeling right now?
+                    </p>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="feelingOptions"> Good
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="feelingOptions"> Great
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="feelingOptions"> The Greatest
+                        </label>
+                    </div>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+            </form>
+        </div>
+        <div class="col-md-3">&nbsp;</div>
+    </div>
+</div> <!-- closes the container div -->
+    
+    
+    
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+    
+</html>
