@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Teaching UX</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/docs/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/docs/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- start nav -->
+	<nav id="nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<script>
+			$('#nav').load('common/nav.html');
+		</script>
+	</nav>
+    <!--end nav-->
+
+    <div class="container">
+      <div class="starter-template">
+      	<h1>Navigation: Lessons from Don't Make Me Think, Chapter 6</h1>
+      	<h2>Web Navigation 101</h2>
+      	<ul>
+      		<li>You’re usually trying to find something</li>
+      		<li>You decide whether to ask first or browse first</li>
+      		<li>If you choose to browse, you make your way through a hierarchy, using signs to guide you</li>
+      	</ul>
+      	<h2>The unbearable lightness of browsing</h2>
+      	<ul>
+      		<li>No sense of scale</li>
+      		<li>No sense of direction</li>
+      		<li>No sense of location</li>
+      	</ul>
+      	<p><em>So what? Your navigation better be good.</em></p>
+      	<img src="img/department-store.png" alt="department store" class="img-responsive" />
+      	<h2>The overlooked purposes of navigation</h2>
+      	<ul>
+      		<li>It gives us something to hold on to</li>
+      		<li>It tells us what’s here</li>
+      		<li>It tells us how to use the site</li>
+      		<li>It gives us confidence in the people who built it</li>
+      	</ul>
+      	<h1>Web Navigation Conventions &amp; Terminology</h1>
+      	<h2>Persistent Navigation (aka Global Navigation)</h2>
+      	<ul>
+      		<li>Navigation that is everywhere</li>
+      		<li>Site ID, sections, a way home, a way to search, utilities</li>
+      		<li>Two exceptions to the “everywhere” rule: home page (does not happen much any more) &amp; forms</li>
+      	</ul>
+      	<h1>Home links</h1>
+      	<ul>
+      		<li>Include a “Home” link in the main navigation</li>
+      		<li>Include the word “Home” as part of the Site ID/main logo</li>
+      		<li>Are we at a time on the web where we can remove the word Home entirely?</li>
+      	</ul>
+      	<h1>Search</h1>
+      	<ul>
+      		<li>Unless a site is very small and well-organized, include search</li>
+      		<li>To keep things simple, follow one of these patterns (and use the word “Search” instead of a fancy alternative)</li>
+      		<li>Qualify the search when necessary. For example “Search - for products” or “Search - this site”</li>
+      	</ul>
+      	<h2>Search options (aka Advanced Search)</h2>
+      	<ul>
+      		<li>Not often used by real users</li>
+      		<li>Make sure that it works very well if you implement this. Avoid restrictions that cause zero results.</li>
+      		<li>Find examples of Advanced Search on the web</li>
+      	</ul>
+      	<h1>Secondary, tertiary, and whatever comes after tertiary</h1>
+      	<ul>
+      		<li>Deeper levels of navigation require the same thoughtfulness as the higher ones. Have the full depth of the navigation worked out “before you argue about color scheme for the Home page”.</li>
+      		<li>“by the time people get this deep into the site, they’ll know how it works” is mostly a myth</li>
+      		<li>Multi-level navigation is hard to design
+      			<ul>
+      				<li>Getting sample content and examples for lower levels is difficult</li>
+      				<li>Real estate is limited</li>
+      				<li>Time is limited</li>
+      				<li>Unless you worked it out from the beginning, it’s hard to elegantly add it at the end</li>
+      			</ul>
+      		</li>
+      		<li>See examples like <a href="http://futureshop.ca">FutureShop.ca</a> for multi-level navigation</li>
+      	</ul>
+      	<h1>Page Name</h1>
+      	<ul>
+      		<li>Give every page a name</li>
+      		<li>Put the name in the right place</li>
+      		<li>Make them prominent</li>
+      		<li>Make it match what I clicked</li>
+      	</ul>
+      	<h1>You are here indicators</h1>
+      	<ul>
+      		<li>Remember that a website has no sense of scale, direction, or location; therefore, “You Are Here” messages are very helpful.</li>
+      		<li>Typically done as a “current page” style on a navigation element. For example, a colour change, a bullet marking above/below/beside, or a font change. It might be a mix of all of these.</li>
+      		<li>Don’t make them too subtle</li>
+      	</ul>
+      	<h1>Breadcrumbs</h1>
+      	<ul>
+      		<li>Similar to “You Are Here” indicators, it gives you a sense of place</li>
+      		<li>It tells you where you are in the hierarchy, and how deep you have travelled</li>
+      		<li>They are not a replacement for good navigation</li>
+      		<li>Caution: they typically show you the path from the Home page to where you are, not the actual path you took to get where you are.</li>
+      		<li>Tips
+      			<ul>
+      				<li>Put them at the top</li>
+      				<li>Use “>” between levels</li>
+      				<li>Use small, but readable font</li>
+      				<li>Treat the last item (where you are) differently - usually bold</li>
+      				<li>Don’t use them instead of a page name</li>
+      			</ul>
+      		</li>
+      	</ul>
+      	<h1>Tabs</h1>
+      	<ul>
+      		<li>Krug loves tabs, I’m less enamoured</li>
+      		<li>They are a good simple navigation structure when done right. Amazon did them right way back when, but even they have moved on from tabs.</li>
+      		<li>Horizontal navigation limits expansion.</li>
+      		<li>You can still do good horizontal navigation without a literal “tab” visual</li>
+      	</ul>
+      	<h1>Simple Trunk Test</h1>
+      	<ul>
+      		<li>Take an internal page of your site. Hold it at arms length so you cannot study it closely. Find and circle these items:
+      			<ul>
+      				<li>Site ID, Page Name, Sections and subsections, Local navigation, “You are here” indicators, Search</li>
+      			</ul>
+      		</li>
+      		<li>This is a super simple test, but it still might give you areas to improve your navigation structures.</li>
+      	</ul>
+      </div><!-- end starter-template -->
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

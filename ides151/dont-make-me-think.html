@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Teaching UX</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/docs/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/docs/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- start nav -->
+	<nav id="nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<script>
+			$('#nav').load('common/nav.html');
+		</script>
+	</nav>
+    <!--end nav-->
+
+    <div class="container">
+      <div class="starter-template">
+      	
+      	<h1>Don't Make Me Think</h1>
+      	<p>This is an excellent introductory book for people interested in user experience.</p>
+      	
+      	<p>Make your interfaces self-evident enough so that your neighbour can say, “Oh, it’s a ______.” A couple of things that make us think:</p>
+      	<ul>
+      		<li>Labels</li>
+      		<li>Things that don’t look like what they are. This concept is called affordances (see Don Norman’s excellent book - <a href="http://www.jnd.org/books/design-of-everyday-things-revised.html">Design of Everyday Things</a>)</li>
+      	</ul>
+      	<p>Let’s look at examples from the Don't Make Me Think book:</p>
+      	<img src="img/dmmt1.png" alt="dmmt1" class="img-responsive" /><br />
+      	<img src="img/dmmt2.png" alt="dmmt2" class="img-responsive" /><br />
+      	<img src="img/dmmt3.png" alt="dmmt3" class="img-responsive" /><br />
+      	<img src="img/dmmt4.png" alt="dmmt4" class="img-responsive" /><br />
+      	<h2>Why is it so important to not make me think?</h2>
+      	<ul>
+      		<li>It’s not this...<br />
+      		On the Internet, the competition is just one click away, so if you frustrate users they’ll head somewhere else.</li>
+      		<li>It’s more this...<br />
+      		Making pages self-evident makes everything <em>seem</em> better.</li>
+      		<li>And this...<br />
+      		People are going to spend far less time looking at the pages we design than we’d like to think.</li>
+      		<li>And good design makes people happy. Just listen to Don Norman talk about it:</li>
+      	</ul>
+      	<iframe src="https://embed-ssl.ted.com/talks/don_norman_on_design_and_emotion.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      	<h2>We don't think. We are scanning, satisficing, and muddling through.</h2>
+      	<p>This is what scanning means</p>
+      	<img src="img/scanning.png" alt="scanning" class="img-responsive" /><br />
+      	<p>Scanning looks like this too. We scan and filter for what's important to us at the same time.</p>
+      	<img src="img/scanning2.png" alt="scanning" class="img-responsive" /><br />
+      	<h2>We don’t read, we scan - but why do we scan?</h2>
+      	<ul>
+      		<li>We’re usually in a hurry</li>
+      		<li>We know we don’t <em>need</em> to read everything</li>
+      		<li>We’re good at it</li>
+      	</ul>
+      	<h2>Satisficing</h2>
+      	<ul>
+      		<li>Choosing the first reasonable option</li>
+      		<li>It’s how firefighters, pilots, chessmasters, and nuclear power plan operators make important decisions within constraints of time, with limited information, vague goals, and changing conditions</li>
+      		<li>The word and concept came from this book - Sources of Power:</li>
+      	</ul>
+      	<img src="img/sources-of-power.png" alt="book" class="img-responsive" /><br />
+      	<h2>Why do we satisfice?</h2>
+      	<ul>
+      		<li>We’re usually in a hurry</li>
+      		<li>There’s not much of a penalty for guessing wrong</li>
+      		<li>Weighing options may not improve our chances</li>
+      		<li>Guessing is more fun</li>
+      	</ul>
+      	<h2>We don’t figure out how things work. We muddle through.</h2>
+      	<img src="img/muddle.png" alt="muddle" class="img-responsive" /><br />
+      	<h2>Why do we muddle through?</h2>
+      	<ul>
+      		<li>It’s not important to us</li>
+      		<li>If we find something that works, we stick to it</li>
+      	</ul>
+      	<h2>Web a.k.a. Billboard design</h2>
+      	<p>We scan, satisfice, and muddle through. We don't like to think. How can we design for these conditions? It sounds like we are designing for billboards. If people are using the web like billboards, then let's design great billboards.</p>
+      	<h3>Create a clear visual hierarchy</h3>
+      	<ul>
+      		<li>The more important a thing is, the more prominent it is</li>
+      		<li>Things that are related logically are also related visually</li>
+      		<li>Things are “nested” visually to show what’s part of what</li>
+      		<li>If no clear visual hierarchy exists on your interface, then the experience slows and it feels worse (even though the visitor might eventually figure it out)</li>
+      	</ul>
+      	<h3>Mindless Choices</h3>
+      	<ul>
+      		<li>It doesn’t matter how many times I have to click, as long as each click is a mindless, unambiguous choice</li>
+      		<li>The 3-click (sometimes 4 or 5) rule becomes less important</li>
+      		<li>Exceptions: sites that I visit repeatedly, or applications should aim for fewer clicks to get to the content</li>
+      	</ul>
+      	<img src="img/mindless-choices.png" alt="mindless" class="img-responsive" /><br />
+      	<img src="img/dell-menu.png" alt="dell" class="img-responsive" /><br />
+      	<img src="img/lacie.png" alt="lacie" class="img-responsive" /><br />
+      	<h3>Writing for the web</h3>
+      	<ul>
+      		<li>Get rid of half the words on each page, then get rid of half of what’s left</li>
+      		<li>Reduce “happy talk” and instructions, do not reduce content</li>
+      		<li>Why?
+      			<ul>
+      				<li>It reduces the noise level on the page</li>
+      				<li>It makes the useful content more prominent</li>
+      				<li>It makes the pages shorter, allowing users to see more of each page at a glance without scrolling</li>
+      			</ul>
+      		</li>
+      	</ul>
+      	<div class="well">
+      		<em>When would you not follow the recommendations above to reduce your web content?</em>
+      	</div>
+      	<p>Try to identify the happy talk in the following screen shots:</p>
+      	<img src="img/basecamp.png" alt="Basecamp" class="img-responsive" /><br />
+      	<img src="img/rbc.png" alt="RBC" class="img-responsive" /><br />
+      	<img src="img/ingdirect.png" alt="ING Direct" class="img-responsive" /><br />
+      	<img src="img/vancouver.png" alt="City of Vancouver" class="img-responsive" /><br />
+      	<img src="img/calgary.png" alt="City of Calgary" class="img-responsive" /><br />
+      	<img src="img/seagate.png" alt="Seagate" class="img-responsive" /><br />
+      	
+      	<h2>Consistency and Conventions</h2>
+      	<p>When people are accustomed to a set of interactions, they think less about them. So use well-established patterns when you can. Think carefully before you start breaking away from convention.</p>
+      	<ul>
+      		<li>Conventions are useful and they make your job easier</li>
+      		<li>Designers are often reluctant to take advantage of them<br />
+      		Innovate when you know you have a better idea, but take advantage of conventions when you don’t</li>
+      		<li>Examples include: expand/collapse, links, navigation structures, shopping carts</li>
+      	</ul>
+      	<h3>Break up pages into clearly defined areas</h3>
+      	<img src="img/roxy.png" alt="Roxy" class="img-responsive" /><br />
+      	<h3>Make the clickable look clickable</h3>
+      	<p>But it depends... on what?</p>
+      	<img src="img/bing.png" alt="Bing" class="img-responsive" /><br />
+      	<img src="img/google.png" alt="Google" class="img-responsive" /><br />
+      	<p>Do you need the buttons to look like buttons on the sites above?</p>
+      	<h3>Keep the noise to a dull roar</h3>
+      	<ul>
+      		<li>Busyness: if everybody is shouting, you cannot hear a single person</li>
+      		<li>Background noise: constant visual noise. e.g. lines on tables</li>
+      	</ul>
+      	<a href="http://www.goetzskyvu.com/GOETZ_THEATRE/GOETZ_SHOW_%26_TIMES.html"><img src="img/goetz.png" alt="goetz" class="img-responsive" /></a>
+      </div><!-- end starter-template -->
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

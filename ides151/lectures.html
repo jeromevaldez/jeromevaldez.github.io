@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>UX Lectures - Jerome Valdez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+      
+      /*some style stuff that I was hacking at here*/
+      
+      body {
+      	font-family: Georgia, Helvetica, sans-serif;
+      	font-size: 23px;
+      }
+      h1, h2, h3, h4, h5, .navbar, .sidebar-nav {
+      	font-family: Helvetica, Arial, sans-serif;
+      }
+      h5 {
+      	font-size: 23px;
+      }
+      .navbar, .sidebar-nav {
+      	font-size: 15px;
+      }
+      .sidebar-nav {
+      	position: fixed;
+      }
+      h1 {
+      	padding-left: 0px;
+      	padding-bottom: 20px;
+      }
+      section p, section li {
+      	padding-bottom: 20px;
+      	line-height: 30px;
+      }
+      section li {
+      	padding-bottom: 10px;
+      }
+      section ul, section ol {
+      	padding-left: 7px;
+      }
+      section {
+      	border-bottom: 1px solid #ddd;
+      	padding-bottom: 0px;
+      	margin-bottom: 0px;
+      	padding-top: 50px;
+      }
+      
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="../assets/ico/favicon.png">
+	
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">UX Lectures - Jerome</a>
+          <div class="nav-collapse collapse">
+            <!--<p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">Username</a>
+            </p>-->
+            <!--<ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#site-maps">Site Maps</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+      		 
+          <div class="span3">
+            <div class="well sidebar-nav">
+              <ul class="nav nav-list">
+                <li class="nav-header">Topics</li>
+                <li class="active"><a href="#intro">Intro</a></li>
+                <li><a href="#site-maps">Site Maps</a></li>
+                <li><a href="#designing-navigation">Designing Navigation</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!--/.well -->
+          </div><!--/span-->
+          
+          <div class="span9">
+          
+          	<section id="intro">
+				<h1>Intro</h1>
+				<p>Please read through the <a href="https://docs.google.com/document/d/1slVChZngFR6iihOF3Kvs1Ls683WWmoPC38U1R2FAD6g/edit?usp=sharing">course outline</a>. It tells you what's up.</p>
+				<h2>Office Hours</h2>
+				<p>I am usually available to meet just before this class between 12:30-2:00pm. But you should <a href="#contact">contact me</a> to ensure that I will be there.</p>
+				<h2>Schedule Adjustments</h2>
+				<p>My class will not exist on Oct 18th. I will be out of town. I will adjust the curriculum to account for this.</p>
+			</section>
+			
+			<section id="site-maps">
+				<h1>Site Maps</h1>
+				<h2>Definition</h2>
+				<p>A site map is a visual representation of a web site’s structure. Also known as a structural model, taxonomy, hierarchy, navigation model or site structure. <a href="">(from Communicating Design - by Dan Brown)</a></p>
+				<p>They show how all of the information fits together (hence, Information Architecture).</p>
+				<p>These are NOT the same as a “site map” link on a site. This is really an index of the content on a site.</p>
+				<p>Is it "site map" with two words? or just "sitemap"? I have used and will accept both. But you should be consistent within one document.</p>
+				
+				<h2>What is Information Architecture?</h2>
+				<p><a href="http://www.maya.com/the-feed/what-is-information-architecture"><img src="img/maya-information-thumbnail.png" alt="Information Video from Maya" /></a>&nbsp;<a href="http://www.maya.com/the-feed/what-is-information-architecture"><img src="img/maya-architecture.png" width="420px" /></a></p>
+				
+				<h2>Who uses site maps?</h2>
+				<p>Basically everybody:
+					<ul>
+						<li>Graphic Designers</li>
+						<li>Developers</li>
+						<li>Project Managers</li>
+						<li>Clients</li>
+					</ul>
+				</p>
+				
+				<h2>What tools do we use to make them?</h2>
+				<ul>
+					<li>OmniGraffle - this is what we'll focus on for this course</li>
+					<li>Visio</li>
+					<li>Adobe Illustrator</li>
+					<li>PowerPoint</li>
+					<li>Word</li>
+					<li>Excel</li>
+					<li>Google Drawing</li>
+					<li><a href="http://balsamiq.com/products/mockups/">Balsamiq</a></li>
+					<li>... but we can use good old fashioned pencil and paper</li>
+				</ul>
+				
+				<h2>Step to make them</h2>
+				<ol>
+					<li>List or gather up all of your content (with existing sites do a content inventory)</li>
+					<li>Group content into categories (with existing sites re-group content as necessary) - sometimes people use card sorting to gather user feedback about how to group, alternatively you can use navigation testing to see if structures you propose work for users</li>
+					<li>Create a site map of your structure</li>
+				</ol>
+				
+				<h2>Common ways to organize</h2>
+				<ul>
+					<li>By Audience</li>
+					<li>By Topic</li>
+					<li>By Task or Activity</li>
+				</ul>
+				
+				<h2>Site map tricks, tips, and pitfalls</h2>
+				<ul>
+					<li>Use a consistent visual language. Why is this consistency important?</li>
+					<li>Start with org chart layouts, then explore alternative layouts if needed</li>
+					<li>Define what kinds of links you need to show, don’t show them all</li>
+					<li>Define types of pages, but avoid too much density - it looks clumsy</li>
+					<li>Consider multiple versions to avoid density. Use layers in OmniGraffle to maintain changes between the multiple versions.</li>
+					<li>Don’t oversimplify - make sure you capture everything you need (perhaps with a content audit)</li>
+					<li>Politics of hierarchy</li>
+					<li>Labels are not usually exact</li>
+					<li>Lines styles can vary: including no lines</li>
+				</ul>
+				
+				<h2>Site map practice...</h2>
+				<p>Maybe use:
+					<ul>
+						<li><a href="http://iqmetrix.com">iQmetrix</a></li>
+						<li><a href="http://www.differentbikes.ca/">Different Bikes</a></li>
+						<li><a href="http://www.tazo.com/">Tazo Tea</a></li>
+						<li><a href="http://bcsalmonfacts.com">BC Salmon Facts</a></li>
+					</ul> 
+				</p>
+				
+				<h2>Site map assignment - due Oct 18, 2pm</h2>
+				<p>Please create a site map for <a href="http://indochino.com">indochino.com</a></p>
+				<p>Remember that site maps do not represent how pages link to one another. They represent the core structure of the site.</p>
+				<p>Every page of the site should be accounted for, except for these two areas...</p>
+				<ul>
+					<li>You do not need to include pages behind Sign In, but you should include the Sign In page.</li>
+					<li>You do not need to include any of the checkout pages, but you should include the Shopping Bag page.</li>
+				</ul>
+			</section>
+			
+			<section id="designing-navigation">
+				<h1>Designing Navigation - Don't Make Me Think Chp 6</h1>
+				<h2>Web Navigation 101</h2>
+				<p>You're usually trying to find something. So think of the different behaviours of finding things. Searching or exploring/browsing.</p>
+				<p>You decide whether to ask first or browse first</p>
+				<p>If you choose to browse, you make your way through a hierarchy, using signs to guide you.</p>
+			</section>
+			
+			<section id="contact">
+				<h1>Contact</h1>
+				<p>jerome[dot]valdez at gmail[dot]com</p>
+			</section>
+			
+          </div><!--/span12-->
+      </div><!--/row-fluid-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Jerome Valdez 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-affix.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
