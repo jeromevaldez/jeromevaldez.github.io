@@ -1,0 +1,105 @@
+<!DOCTYPE html> <!-- This is the doctype declaration for HTML5 -->
+<html lang="en">
+<!-- The head is where a bunch of meta information goes. It's also where links to stylesheets go. Stylesheet links should not be placed in the body tags. -->
+<head>
+<!-- The charset meta tag tells the browser which character encoding set it should use. Just use utf-8 for now. -->
+<meta charset="utf-8">
+
+<!-- The viewport metatag lets developers control the viewport's size and scale -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- The description meta tag describes your page to search engines. -->  
+<meta name="description" content="This is Jerome's demo site for IDES252.">
+
+<!-- The author meta tag describes the author of the page to search engines. -->    
+<meta name="author" content="Jerome Valdez">
+    
+<!-- The title tag is the stuff that shows up as the tab label or the window label in your browser. -->
+<title>IDES 252 - testing</title>
+
+<!-- Stylesheet links are usually inserted as below. List the stylesheets in an order that makes sense. The style sheets on top can be overridden by the ones beneath. -->
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- We can also write page-specific styles in the head tags. This is not usually recommended unless you're testing something out one time only. -->    
+<style>
+    ul.menu, ul.rmenu {
+        background-color: #fff;
+        font-size: 20px;
+        display: inline-block;
+    }
+    ul.rmenu {
+/*        text-align: right;*/
+/*        float: right;*/
+    }
+    ul.rmenu li {
+        display:inline;
+        padding-left: 30px;
+    }
+    .bigtitle {
+        text-align: center;
+    }
+    .leftcol, .midcol, .rightcol {
+/*        border: solid 1px red;*/
+        display:inline-block;
+        vertical-align: middle;
+    }
+    .midcol {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    div ul {
+        padding-left: 0;
+        margin-top:20px;
+        padding-top:;
+    }
+    div ul li {
+        display:inline;
+        padding-right: 15px;
+    }
+    .wrapper {
+        text-align: center;
+        margin:auto;
+    }
+</style>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="leftcol">
+            <ul class="">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="midcol">
+            <h1 class="bigtitle">Menu Test</h1>
+        </div>
+        <div class="rightcol">
+            <ul class="">
+                <li><a href="/proj1/">Project 1</a></li>
+                <li><a href="/proj2/">Project 2</a></li>
+                <li><a href="/proj3/">Project 3</a></li>
+                <li><a href="/proj4/">Project 4</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    
+    <hr>
+    
+    <ul class="menu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+    </ul>
+    <ul class="rmenu">
+        <li><a href="/proj1/">Project 1</a></li>
+        <li><a href="/proj2/">Project 2</a></li>
+        <li><a href="/proj3/">Project 3</a></li>
+        <li><a href="/proj4/">Project 4</a></li>
+    </ul>
+    <h1 class="bigtitle">Menu Test</h1>
+    
+    
+</body>    
+</html>
