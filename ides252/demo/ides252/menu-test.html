@@ -18,87 +18,44 @@
 <title>IDES 252 - testing</title>
 
 <!-- Stylesheet links are usually inserted as below. List the stylesheets in an order that makes sense. The style sheets on top can be overridden by the ones beneath. -->
-<link rel="stylesheet" href="css/styles.css">
+<!--<link rel="stylesheet" href="css/styles.css">-->
 
 <!-- We can also write page-specific styles in the head tags. This is not usually recommended unless you're testing something out one time only. -->    
 <style>
-    ul.menu, ul.rmenu {
-        background-color: #fff;
-        font-size: 20px;
-        display: inline-block;
+    .menu li {
+        display: inline;
     }
-    ul.rmenu {
-/*        text-align: right;*/
-/*        float: right;*/
+    .submenu {
+        display: none;
     }
-    ul.rmenu li {
-        display:inline;
-        padding-left: 30px;
+    .dropdown:hover .submenu {
+        display: block;
+        border: solid 1px red;
+/*
+        position: relative;
+        right:0;
+*/
     }
-    .bigtitle {
-        text-align: center;
-    }
-    .leftcol, .midcol, .rightcol {
-/*        border: solid 1px red;*/
-        display:inline-block;
-        vertical-align: middle;
-    }
-    .midcol {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-    div ul {
-        padding-left: 0;
-        margin-top:20px;
-        padding-top:;
-    }
-    div ul li {
-        display:inline;
-        padding-right: 15px;
-    }
-    .wrapper {
-        text-align: center;
-        margin:auto;
+    .submenu li {
+        display:block;
     }
 </style>
     
 </head>
 <body>
-    <div class="wrapper">
-        <div class="leftcol">
-            <ul class="">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-            </ul>
-        </div>
-        <div class="midcol">
-            <h1 class="bigtitle">Menu Test</h1>
-        </div>
-        <div class="rightcol">
-            <ul class="">
-                <li><a href="/proj1/">Project 1</a></li>
-                <li><a href="/proj2/">Project 2</a></li>
-                <li><a href="/proj3/">Project 3</a></li>
-                <li><a href="/proj4/">Project 4</a></li>
-            </ul>
-        </div>
-    </div>
-    
-    
-    
-    <hr>
+
     
     <ul class="menu">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/about.html">About</a></li>
+        <li class="dropdown"><a href="">Dropdown</a>
+            <ul class="submenu">
+                <li>List one</li>
+                <li>List one</li>
+                <li>List one</li>
+            </ul>
+        </li>
     </ul>
-    <ul class="rmenu">
-        <li><a href="/proj1/">Project 1</a></li>
-        <li><a href="/proj2/">Project 2</a></li>
-        <li><a href="/proj3/">Project 3</a></li>
-        <li><a href="/proj4/">Project 4</a></li>
-    </ul>
-    <h1 class="bigtitle">Menu Test</h1>
     
     
 </body>    
