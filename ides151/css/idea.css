@@ -2,22 +2,20 @@ body {
 
 }
 .top-nav {
-    margin-top:10px;
-    margin-bottom: 10px;
-    background-color: lightpink;*/
-    background-color: #fff;
+    margin-top:0px;
+    margin-bottom:20px;
 }
 .top-nav a {
     display:block;
-    padding: 0;
-    height: 150px;
-    font-size: 1.5em;
+    padding: 10px 0 0 0;
+    height: 70px;
+    font-size: 1em;
     /*color: white;*/
-    color: #333;
-	background: url() center center repeat-x #ccc;
+    color: ;
+	background: url() center center repeat-x #fff;
 }
 .top-nav a:hover {
-	/*color:#efefef;*/
+	background-color:#fff;
 	color: #000;
 	text-decoration: none;
 }
@@ -51,7 +49,7 @@ footer a {
 }
 a {
 /*	color: #a6621b;*/
-    color: #C50D03;
+    color: #136dc1;
 }
 a:hover {
 	background-color: ;
