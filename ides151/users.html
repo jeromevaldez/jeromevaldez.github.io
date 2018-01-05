@@ -1,46 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!--<link rel="icon" href="../../favicon.ico">-->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Online lecture notes for the IDEA program">
+    <meta name="author" content="Jerome Valdez">
     <title>Teaching UX</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-
-    <!-- Custom styles for this template -->
-    <link href="css/starter-template.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="bootstrap/docs/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap/docs/assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/idea.css">
   </head>
-
   <body>
-
-    <!-- start nav -->
-	<nav id="nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<script>
-			$('#nav').load('common/nav.html');
-		</script>
-	</nav>
-    <!--end nav-->
-
-    <div class="container">
-      <div class="starter-template">
+      
+      <div class="container">
+        <div class="top-nav"><h1><a href="index.html">IDES 151</a></h1></div>
       	<h1>Users</h1>
       	<br />
       	<div class="well">
@@ -49,7 +21,7 @@
       	<h2>Getting to know your users</h2>
       	<p>As a designer, you should get to know your users. This seems like a simple and obvious statement, right? But many designers still fail to make the effort to know their audience. So let's take a step back and ask, "Why is it important to get to know our audience?" I will make a not-very-bold claim that a design is not successful unless it has an audience. When we design something we do it with people in mind. For our designs to be successful, we must exercise some level of empathy with our audience.</p>
       	<p>Let's take a moment to define empathy. Empathy is understanding what others are feeling because you have experienced it yourself or can put yourself in their shoes.</p>
-      	<img src="img/shoes.png" alt="shoes" class="img-responsive" /><br />
+      	<img src="img/shoes.png" alt="shoes" class="img-fluid" /><br />
        	<div class="well">     	
       		<p><em>What's the difference between empathy and sympathy?</em></p>
       	</div>
@@ -94,8 +66,8 @@
       		<li>Economic background</li>
       		<li>Is the site or application satisfying to use</li>
       	</ul>
-      	<img src="img/homedepot-survey1.png" alt="home depot survey" class="img-responsive" /><br />
-      	<img src="img/homedepot-survey2.png" alt="home depot survey" class="img-responsive" /><br />
+      	<img src="img/homedepot-survey1.png" alt="home depot survey" class="img-fluid" /><br />
+      	<img src="img/homedepot-survey2.png" alt="home depot survey" class="img-fluid" /><br />
       	<p>There are whole courses devoted to teaching you how to do surveys. I'll offer a few tips here:</p>
       	<ul>
       		<li>Try to use simple multiple-choice questions. Avoid asking the user to enter any text.</li>
@@ -104,20 +76,20 @@
       	</ul>
       	<h3>Usability Testing</h3>
       	<p>Many people think that usability tests have to look and feel like this:</p>
-      	<img src="img/usability-test.png" alt="usability test" class="img-responsive" /><br />
+      	<img src="img/usability-test.png" alt="usability test" class="img-fluid" /><br />
       	<p>They don't have to be that way at all. I prefer the lighter, easier method that Steve Krug wrote about in his excellent book - <a href="http://www.sensible.com/rsme.html"><em>Rocket Surgery Made Easy</em></a>. Here is a demo video of him performing a test:</p>
       	<p><iframe width="640" height="480" src="//www.youtube.com/embed/QckIzHC99Xc" frameborder="0" allowfullscreen></iframe></p>
       	<p>Following his method allows people to overcome their usual excuses to not perform usability tests.</p>
       	<h3>Card Sorting</h3>
-      	<img src="img/card-sorting.png" alt="card sorting" class="img-responsive" /><br />
+      	<img src="img/card-sorting.png" alt="card sorting" class="img-fluid" /><br />
       	<p>Card sorting is a research method that attempts to extract how people think about and organize information. Participants are given small cards or sticky notes, then asked to group them into logical groups. After a few participants perform the same task on the same cards, you should be able to see patterns in how people group the items.</p>
       	<h3>Video Observation</h3>
-      	<img src="img/video-observation.png" alt="video observation" class="img-responsive" /><br />
+      	<img src="img/video-observation.png" alt="video observation" class="img-fluid" /><br />
       	<p>Video observations allow us to capture an accurate picture of an interaction; however, they can be intrusive. The moment you aim a camera at somebody, they will change their behaviour.</p>
-      	<a href="http://silverbackapp.com"><img src="img/silverback.png" alt="silverback" class="img-responsive" /></a><br />
+      	<a href="http://silverbackapp.com"><img src="img/silverback.png" alt="silverback" class="img-fluid" /></a><br />
       	<p>Another form of video observation includes doing screen recordings of usability sessions. The <a href="http://silverbackapp.com">Silverback application</a> is one way of capturing on-screen interactions along with the participants video/voice.</p>
       	<h3>Ethnographic Research</h3>
-      	<img src="img/ethnographic-research.png" alt="ethnographic research" class="img-responsive" /><br />
+      	<img src="img/ethnographic-research.png" alt="ethnographic research" class="img-fluid" /><br />
       	<ul>
       		<li>Observing behaviours in natural settings</li>
       		<li>Comes from the field of anthropology as a method to study ‘outside’ cultures</li>
@@ -129,14 +101,14 @@
       	</div>
       	<h3>Super Noticing</h3>
       	<p>This isn't exactly a research "tool". It's more of a state of mind when you are doing research. The article in which I discovered the term is called <a href="http://www.aiga.org/gain-journal-ever-notice/">"Ever Notice?"</a>, written by Steve Portigal and Dan Solzberg.</p>
-      	<a href="http://www.aiga.org/gain-journal-ever-notice/"><img src="img/ever-notice.png" alt="ever notice" class="img-responsive" /></a><br />
+      	<a href="http://www.aiga.org/gain-journal-ever-notice/"><img src="img/ever-notice.png" alt="ever notice" class="img-fluid" /></a><br />
       	<p>Here's <a href="http://www.underconsideration.com/speakup/archives/004560.html">another relevant article on Super Noticing:</a></p>
-      	<a href="http://www.underconsideration.com/speakup/archives/004560.html"><img src="img/pay-attention.png" alt="pay attention" class="img-responsive" /></a><br />
+      	<a href="http://www.underconsideration.com/speakup/archives/004560.html"><img src="img/pay-attention.png" alt="pay attention" class="img-fluid" /></a><br />
       	<blockquote id="bukowski-quote"><em>"It's not the large things that send a man to a madhouse. Death, he is ready for, or, murder, incest, robbery, fire, flood. No. It's the continuing series of small tragedies that send a man to a madhouse..."</em><br />- Charles Bukowski</blockquote>
       	<p>So I guess what I'm saying is that you should sweat the small stuff. It's an important part of your craft as a designer.</p>
       	<h3>Super Listening</h3>
       	<p>The close sibling to Super Noticing is Super Listening.</p>
-      	<img src="img/super-listening.png" alt="super listening" class="img-responsive" /><br />
+      	<img src="img/super-listening.png" alt="super listening" class="img-fluid" /><br />
       	<p>When you are doing your research, you should be doing much more listening than speaking. And when you listen to another person, you should put your full energy into paying attention. Listen for the nuances of their words and tone. Listen for the brief pauses. Ask questions to clarify why they paused or why they chose the words that they did.</p>
       	<h2>What do your users need to do?</h2>
       	<ul>
@@ -144,17 +116,13 @@
       		<li>Which tasks are the most important on any given page?</li>
       		<li>This leads us to functionality and usability...</li>
       	</ul>
-      	
-      </div><!-- end starter-template -->
-    </div><!-- /.container -->
-
+</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
   </body>
 </html>

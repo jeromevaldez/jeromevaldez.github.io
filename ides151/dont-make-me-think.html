@@ -1,46 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!--<link rel="icon" href="../../favicon.ico">-->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Online lecture notes for the IDEA program">
+    <meta name="author" content="Jerome Valdez">
     <title>Teaching UX</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-
-    <!-- Custom styles for this template -->
-    <link href="css/starter-template.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="bootstrap/docs/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap/docs/assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/idea.css">
   </head>
-
   <body>
-
-    <!-- start nav -->
-	<nav id="nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<script>
-			$('#nav').load('common/nav.html');
-		</script>
-	</nav>
-    <!--end nav-->
-
-    <div class="container">
-      <div class="starter-template">
+      
+      <div class="container">
+        <div class="top-nav"><h1><a href="index.html">IDES 151</a></h1></div>
       	
       	<h1>Don't Make Me Think</h1>
       	<p>This is an excellent introductory book for people interested in user experience.</p>
@@ -51,10 +23,10 @@
       		<li>Things that don’t look like what they are. This concept is called affordances (see Don Norman’s excellent book - <a href="http://www.jnd.org/books/design-of-everyday-things-revised.html">Design of Everyday Things</a>)</li>
       	</ul>
       	<p>Let’s look at examples from the Don't Make Me Think book:</p>
-      	<img src="img/dmmt1.png" alt="dmmt1" class="img-responsive" /><br />
-      	<img src="img/dmmt2.png" alt="dmmt2" class="img-responsive" /><br />
-      	<img src="img/dmmt3.png" alt="dmmt3" class="img-responsive" /><br />
-      	<img src="img/dmmt4.png" alt="dmmt4" class="img-responsive" /><br />
+      	<img src="img/dmmt1.png" alt="dmmt1" class="img-fluid" /><br />
+      	<img src="img/dmmt2.png" alt="dmmt2" class="img-fluid" /><br />
+      	<img src="img/dmmt3.png" alt="dmmt3" class="img-fluid" /><br />
+      	<img src="img/dmmt4.png" alt="dmmt4" class="img-fluid" /><br />
       	<h2>Why is it so important to not make me think?</h2>
       	<ul>
       		<li>It’s not this...<br />
@@ -68,9 +40,9 @@
       	<iframe src="https://embed-ssl.ted.com/talks/don_norman_on_design_and_emotion.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
       	<h2>We don't think. We are scanning, satisficing, and muddling through.</h2>
       	<p>This is what scanning means</p>
-      	<img src="img/scanning.png" alt="scanning" class="img-responsive" /><br />
+      	<img src="img/scanning.png" alt="scanning" class="img-fluid" /><br />
       	<p>Scanning looks like this too. We scan and filter for what's important to us at the same time.</p>
-      	<img src="img/scanning2.png" alt="scanning" class="img-responsive" /><br />
+      	<img src="img/scanning2.png" alt="scanning" class="img-fluid" /><br />
       	<h2>We don’t read, we scan - but why do we scan?</h2>
       	<ul>
       		<li>We’re usually in a hurry</li>
@@ -83,7 +55,7 @@
       		<li>It’s how firefighters, pilots, chessmasters, and nuclear power plan operators make important decisions within constraints of time, with limited information, vague goals, and changing conditions</li>
       		<li>The word and concept came from this book - Sources of Power:</li>
       	</ul>
-      	<img src="img/sources-of-power.png" alt="book" class="img-responsive" /><br />
+      	<img src="img/sources-of-power.png" alt="book" class="img-fluid" /><br />
       	<h2>Why do we satisfice?</h2>
       	<ul>
       		<li>We’re usually in a hurry</li>
@@ -92,7 +64,7 @@
       		<li>Guessing is more fun</li>
       	</ul>
       	<h2>We don’t figure out how things work. We muddle through.</h2>
-      	<img src="img/muddle.png" alt="muddle" class="img-responsive" /><br />
+      	<img src="img/muddle.png" alt="muddle" class="img-fluid" /><br />
       	<h2>Why do we muddle through?</h2>
       	<ul>
       		<li>It’s not important to us</li>
@@ -113,9 +85,9 @@
       		<li>The 3-click (sometimes 4 or 5) rule becomes less important</li>
       		<li>Exceptions: sites that I visit repeatedly, or applications should aim for fewer clicks to get to the content</li>
       	</ul>
-      	<img src="img/mindless-choices.png" alt="mindless" class="img-responsive" /><br />
-      	<img src="img/dell-menu.png" alt="dell" class="img-responsive" /><br />
-      	<img src="img/lacie.png" alt="lacie" class="img-responsive" /><br />
+      	<img src="img/mindless-choices.png" alt="mindless" class="img-fluid" /><br />
+      	<img src="img/dell-menu.png" alt="dell" class="img-fluid" /><br />
+      	<img src="img/lacie.png" alt="lacie" class="img-fluid" /><br />
       	<h3>Writing for the web</h3>
       	<ul>
       		<li>Get rid of half the words on each page, then get rid of half of what’s left</li>
@@ -132,12 +104,12 @@
       		<em>When would you not follow the recommendations above to reduce your web content?</em>
       	</div>
       	<p>Try to identify the happy talk in the following screen shots:</p>
-      	<img src="img/basecamp.png" alt="Basecamp" class="img-responsive" /><br />
-      	<img src="img/rbc.png" alt="RBC" class="img-responsive" /><br />
-      	<img src="img/ingdirect.png" alt="ING Direct" class="img-responsive" /><br />
-      	<img src="img/vancouver.png" alt="City of Vancouver" class="img-responsive" /><br />
-      	<img src="img/calgary.png" alt="City of Calgary" class="img-responsive" /><br />
-      	<img src="img/seagate.png" alt="Seagate" class="img-responsive" /><br />
+      	<img src="img/basecamp.png" alt="Basecamp" class="img-fluid" /><br />
+      	<img src="img/rbc.png" alt="RBC" class="img-fluid" /><br />
+      	<img src="img/ingdirect.png" alt="ING Direct" class="img-fluid" /><br />
+      	<img src="img/vancouver.png" alt="City of Vancouver" class="img-fluid" /><br />
+      	<img src="img/calgary.png" alt="City of Calgary" class="img-fluid" /><br />
+      	<img src="img/seagate.png" alt="Seagate" class="img-fluid" /><br />
       	
       	<h2>Consistency and Conventions</h2>
       	<p>When people are accustomed to a set of interactions, they think less about them. So use well-established patterns when you can. Think carefully before you start breaking away from convention.</p>
@@ -148,28 +120,25 @@
       		<li>Examples include: expand/collapse, links, navigation structures, shopping carts</li>
       	</ul>
       	<h3>Break up pages into clearly defined areas</h3>
-      	<img src="img/roxy.png" alt="Roxy" class="img-responsive" /><br />
+      	<img src="img/roxy.png" alt="Roxy" class="img-fluid" /><br />
       	<h3>Make the clickable look clickable</h3>
       	<p>But it depends... on what?</p>
-      	<img src="img/bing.png" alt="Bing" class="img-responsive" /><br />
-      	<img src="img/google.png" alt="Google" class="img-responsive" /><br />
+      	<img src="img/bing.png" alt="Bing" class="img-fluid" /><br />
+      	<img src="img/google.png" alt="Google" class="img-fluid" /><br />
       	<p>Do you need the buttons to look like buttons on the sites above?</p>
       	<h3>Keep the noise to a dull roar</h3>
       	<ul>
       		<li>Busyness: if everybody is shouting, you cannot hear a single person</li>
       		<li>Background noise: constant visual noise. e.g. lines on tables</li>
       	</ul>
-      	<a href="http://www.goetzskyvu.com/GOETZ_THEATRE/GOETZ_SHOW_%26_TIMES.html"><img src="img/goetz.png" alt="goetz" class="img-responsive" /></a>
-      </div><!-- end starter-template -->
-    </div><!-- /.container -->
-
+      	<a href="http://www.goetzskyvu.com/GOETZ_THEATRE/GOETZ_SHOW_%26_TIMES.html"><img src="img/goetz.png" alt="goetz" class="img-fluid" /></a>
+      </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
   </body>
 </html>
