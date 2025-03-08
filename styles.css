@@ -62,3 +62,7 @@ table tbody tr:nth-of-type(even) {
 table tbody tr:last-of-type {
     border-bottom: none; /* remove last row border */
 }
+
+.content {
+    margin-bottom: 40px; /* add vertical space */
+}
