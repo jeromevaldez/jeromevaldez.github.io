@@ -15,3 +15,50 @@ h1 {
     font-size: 2.5em;
     color: #333;
 }
+
+.container {
+    margin: 0 20px;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Inter', Arial, sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: none; /* remove table border */
+}
+
+table thead tr {
+    background-color: #607d8b; /* greyish blue */
+    color: #ffffff;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: none; /* remove cell borders */
+}
+
+table tbody tr {
+    border-bottom: none; /* remove row borders */
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: none; /* remove last row border */
+}
