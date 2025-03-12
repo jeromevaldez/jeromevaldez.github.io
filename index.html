@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerome Valdez</title>
-    <link rel="stylesheet" href="styles.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -18,6 +19,13 @@
         </div>
         <div class="content">
             <h2>Experiments</h2>
+            <h3>Style switcher</h3>
+            <p>
+                <a href="#" onclick="switchStyle('style1.css')">Style 1</a> | 
+                <a href="#" onclick="switchStyle('style2.css')">Style 2</a> | 
+                <a href="#" onclick="switchStyle('style3.css')">Style 3</a>
+            </p>
+            <h3>Life in Weeks</h3>
             <p><a href="https://stunning-beijinho-59d568.netlify.app/">Life in Weeks</a>. Thanks to <a href="https://waitbutwhy.com/2014/05/life-weeks.html">Tim Urban's article.</a></p>
         </div>
         <div class="content">
@@ -25,5 +33,10 @@
             <p><a href="music.html">I make lists of the year's best music</a></p>
         </div>
     </main>
+    <script>
+        function switchStyle(sheet) {
+            document.getElementById('theme-stylesheet').setAttribute('href', sheet);
+        }
+    </script>
 </body>
 </html>
