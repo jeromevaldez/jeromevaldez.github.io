@@ -8,12 +8,24 @@ header {
     text-align: center;
     padding: 20px;
     background-color: #f8f9fa;
+    position: relative; /* add relative positioning */
 }
 
 h1 {
     margin: 0;
     font-size: 2.5em;
     color: #333;
+}
+
+.linkedin-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.linkedin-icon img {
+    max-width: 70%;
+    height: auto;
 }
 
 .container {
