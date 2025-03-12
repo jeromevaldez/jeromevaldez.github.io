@@ -10,9 +10,9 @@ header {
     background-color: #f8f9fa;
 }
 
-h1 {
+h1, h2, h3 {
+    font-family: 'Crimson Pro', serif;
     margin: 0;
-    font-size: 2.5em;
     color: #333;
 }
 
@@ -37,22 +37,22 @@ table {
     font-family: 'Inter', Arial, sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border: none; /* remove table border */
+    border: none;
 }
 
 table thead tr {
-    background-color: #607d8b; /* greyish blue */
+    background-color: #607d8b;
     color: #ffffff;
     text-align: left;
 }
 
 table th, table td {
     padding: 12px 15px;
-    border: none; /* remove cell borders */
+    border: none;
 }
 
 table tbody tr {
-    border-bottom: none; /* remove row borders */
+    border-bottom: none;
 }
 
 table tbody tr:nth-of-type(even) {
@@ -60,13 +60,9 @@ table tbody tr:nth-of-type(even) {
 }
 
 table tbody tr:last-of-type {
-    border-bottom: none; /* remove last row border */
+    border-bottom: none;
 }
 
 .content {
-    margin-bottom: 40px; /* add vertical space */
-}
-
-.sub-content {
-    margin-bottom: 20px; /* add vertical space between sub-sections */
+    margin-bottom: 40px;
 }
