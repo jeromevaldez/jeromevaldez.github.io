@@ -15,7 +15,14 @@ h1 {
     font-size: 2.5em;
     color: #333;
 }
+/* header margins */
+h2 {
+    margin-bottom: 15px; /* Adjusted to match style2.css */
+}
 
+h3 {
+    margin-top: 15px; /* Adjusted to match style2.css */
+}
 .container {
     margin: 0 20px;
     max-width: 1200px;
