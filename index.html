@@ -10,10 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
 <body>
+    <!-- Mobile Hamburger Button -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="ph ph-list"></i>
+    </button>
+
     <!-- Left Navigation Menu -->
-    <nav class="left-nav">
+    <nav class="left-nav" id="left-nav">
         <div class="nav-content">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -125,6 +131,33 @@
         
         // Load the saved style when the page loads
         window.addEventListener('load', loadSavedStyle);
+        
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const leftNav = document.getElementById('left-nav');
+            const isOpen = leftNav.classList.contains('mobile-menu-open');
+            
+            if (isOpen) {
+                leftNav.classList.remove('mobile-menu-open');
+            } else {
+                leftNav.classList.add('mobile-menu-open');
+            }
+        }
+        
+        // Add event listeners for mobile menu
+        document.getElementById('mobile-menu-toggle').addEventListener('click', toggleMobileMenu);
+        
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const leftNav = document.getElementById('left-nav');
+            const mobileToggle = document.getElementById('mobile-menu-toggle');
+            const isClickInsideNav = leftNav.contains(event.target);
+            const isClickOnToggle = mobileToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && leftNav.classList.contains('mobile-menu-open')) {
+                leftNav.classList.remove('mobile-menu-open');
+            }
+        });
     </script>
 </body>
 </html>
