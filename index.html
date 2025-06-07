@@ -4,32 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerome Valdez</title>
+    <link rel="stylesheet" href="tokens.css">
     <link id="theme-stylesheet" rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1 class="header">Hey, it's Jerome</h1>
-        <!-- <a href="https://www.linkedin.com/in/jeromevaldez/" target="_blank" class="linkedin-icon">
-            <img src="img/linkedin-logo-small.png" alt="LinkedIn Profile">
-        </a> -->
-    </header>
-    <main class="container">
-        <div class="content">
+    <!-- Left Navigation Menu -->
+    <nav class="left-nav">
+        <div class="nav-content">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="https://www.linkedin.com/in/jeromevaldez/" target="_blank">LinkedIn</a></li>
+                <li><a href="music.html">Best Music</a></li>
+                <li>
+                    <span class="nav-header">Experiments</span>
+                    <ul class="sub-nav">
+                        <li><a href="https://stunning-beijinho-59d568.netlify.app" target="_blank">Life in Weeks</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="nav-header">Style Switcher</span>
+                    <ul class="sub-nav">
+                        <li><a href="#" id="style1-link" onclick="switchStyle('style1.css'); return false;">Style 1</a></li>
+                        <li><a href="#" id="style2-link" onclick="switchStyle('style2.css'); return false;">Style 2</a></li>
+                        <li><a href="#" id="style3-link" onclick="switchStyle('style3.css'); return false;">Style 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <header>
+            <h1 class="header">Hey, it's Jerome</h1>
+            <!-- <a href="https://www.linkedin.com/in/jeromevaldez/" target="_blank" class="linkedin-icon">
+                <img src="img/linkedin-logo-small.png" alt="LinkedIn Profile">
+            </a> -->
+        </header>
+        <main class="container">
+        <div class="content" id="home">
             <h2>What's up?</h2>
             <p>I'm a UX designer. I'm currently learning how to use AI tools and it's got me excited.</p>
             <p>You can <a href="https://www.linkedin.com/in/jeromevaldez/" target="_blank"> learn more about me at LinkedIn.</a></p>
+            <p>I presented an AI workshop for UX designers and <a target="_blank" href="workshop/AI_for_UX_Designers.html">here are the slides with a link to download the raw recorded meeting video at the end.</a></p>
         </div>
-        <div class="content">
+        <div class="content" id="experiments">
             <h2>Experiments</h2>
             <h3>Life in Weeks</h3>
             <p><a href="https://stunning-beijinho-59d568.netlify.app/">Life in Weeks</a>. Thanks to <a href="https://waitbutwhy.com/2014/05/life-weeks.html">Tim Urban's article.</a></p>
             <h3>Style switcher</h3>
             <p>
                 <a href="#" onclick="switchStyle('style1.css')">Style 1</a> | 
-                <a href="#" onclick="switchStyle('style2.css')">Style 2</a> <!--| 
-                <a href="#" onclick="switchStyle('style3.css')">Style 3</a>-->
+                <a href="#" onclick="switchStyle('style2.css')">Style 2</a> | 
+                <a href="#" onclick="switchStyle('style3.css')">Style 3</a>
             </p>
         </div>
         <div class="content">
@@ -37,10 +67,64 @@
             <p><a href="music.html">I make lists of the year's best music</a></p>
         </div>
     </main>
+    </div> <!-- Close page-content div -->
     <script>
         function switchStyle(sheet) {
+            // Apply the new stylesheet
             document.getElementById('theme-stylesheet').setAttribute('href', sheet);
+            
+            // Update active state in navigation
+            updateActiveStyleLink(sheet);
+            
+            // Save the user's choice to localStorage
+            try {
+                localStorage.setItem('selectedStyle', sheet);
+            } catch (error) {
+                // Handle cases where localStorage might not be available
+                console.log('Could not save style preference:', error);
+            }
         }
+        
+        function updateActiveStyleLink(sheet) {
+            // Remove active class from all style links
+            document.getElementById('style1-link').classList.remove('active');
+            document.getElementById('style2-link').classList.remove('active');
+            document.getElementById('style3-link').classList.remove('active');
+            
+            // Add active class to the current style
+            if (sheet === 'style1.css') {
+                document.getElementById('style1-link').classList.add('active');
+            } else if (sheet === 'style2.css') {
+                document.getElementById('style2-link').classList.add('active');
+            } else if (sheet === 'style3.css') {
+                document.getElementById('style3-link').classList.add('active');
+            }
+        }
+        
+        function loadSavedStyle() {
+            try {
+                // Check if user has a saved style preference
+                const savedStyle = localStorage.getItem('selectedStyle');
+                
+                if (savedStyle) {
+                    // Apply the saved style
+                    document.getElementById('theme-stylesheet').setAttribute('href', savedStyle);
+                    // Update active state in navigation
+                    updateActiveStyleLink(savedStyle);
+                } else {
+                    // Default to showing Style 1 as active if using styles.css
+                    updateActiveStyleLink('style1.css');
+                }
+            } catch (error) {
+                // If there's any error, just use the default style
+                console.log('Could not load saved style preference:', error);
+                // Default to showing Style 1 as active
+                updateActiveStyleLink('style1.css');
+            }
+        }
+        
+        // Load the saved style when the page loads
+        window.addEventListener('load', loadSavedStyle);
     </script>
 </body>
 </html>

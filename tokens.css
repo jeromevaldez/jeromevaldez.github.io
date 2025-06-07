@@ -1,0 +1,205 @@
+/* Design Tokens - Radix UI Colors */
+/* Based on Radix UI color system: https://www.radix-ui.com/colors */
+
+:root {
+  /* ===== GRAY SCALE ===== */
+  /* Light mode gray scale */
+  --gray-1: #fcfcfc;
+  --gray-2: #f9f9f9;
+  --gray-3: #f0f0f0;
+  --gray-4: #e8e8e8;
+  --gray-5: #e0e0e0;
+  --gray-6: #d9d9d9;
+  --gray-7: #cecece;
+  --gray-8: #bbbbbb;
+  --gray-9: #8d8d8d;
+  --gray-10: #838383;
+  --gray-11: #646464;
+  --gray-12: #202020;
+
+  /* Alpha variants for gray (transparent) */
+  --gray-a1: rgba(0, 0, 0, 0.012);
+  --gray-a2: rgba(0, 0, 0, 0.027);
+  --gray-a3: rgba(0, 0, 0, 0.047);
+  --gray-a4: rgba(0, 0, 0, 0.071);
+  --gray-a5: rgba(0, 0, 0, 0.090);
+  --gray-a6: rgba(0, 0, 0, 0.114);
+  --gray-a7: rgba(0, 0, 0, 0.141);
+  --gray-a8: rgba(0, 0, 0, 0.220);
+  --gray-a9: rgba(0, 0, 0, 0.439);
+  --gray-a10: rgba(0, 0, 0, 0.478);
+  --gray-a11: rgba(0, 0, 0, 0.608);
+  --gray-a12: rgba(0, 0, 0, 0.875);
+
+  /* ===== CYAN SCALE ===== */
+  /* Light mode cyan scale */
+  --cyan-1: #fafefd;
+  --cyan-2: #f2fcfb;
+  --cyan-3: #e6f9f7;
+  --cyan-4: #d8f3f0;
+  --cyan-5: #c7ede7;
+  --cyan-6: #b3e2db;
+  --cyan-7: #9bd1cc;
+  --cyan-8: #7db9b6;
+  --cyan-9: #05a2c2;
+  --cyan-10: #0894b3;
+  --cyan-11: #0c7792;
+  --cyan-12: #04313c;
+
+  /* Alpha variants for cyan (transparent) */
+  --cyan-a1: rgba(5, 162, 194, 0.020);
+  --cyan-a2: rgba(5, 162, 194, 0.055);
+  --cyan-a3: rgba(5, 162, 194, 0.102);
+  --cyan-a4: rgba(5, 162, 194, 0.157);
+  --cyan-a5: rgba(5, 162, 194, 0.220);
+  --cyan-a6: rgba(5, 162, 194, 0.298);
+  --cyan-a7: rgba(5, 162, 194, 0.392);
+  --cyan-a8: rgba(5, 162, 194, 0.514);
+  --cyan-a9: rgba(5, 162, 194, 0.976);
+  --cyan-a10: rgba(8, 148, 179, 0.965);
+  --cyan-a11: rgba(12, 119, 146, 0.953);
+  --cyan-a12: rgba(4, 49, 60, 0.953);
+
+  /* ===== SEMANTIC COLOR TOKENS ===== */
+  /* Background colors */
+  --color-background: var(--gray-1);
+  --color-surface: var(--gray-2);
+  --color-surface-hover: var(--gray-3);
+  
+  /* Border colors */
+  --color-border: var(--gray-6);
+  --color-border-hover: var(--gray-7);
+  --color-border-focus: var(--cyan-8);
+
+  /* Text colors */
+  --color-text-primary: var(--gray-12);
+  --color-text-secondary: var(--gray-11);
+  --color-text-tertiary: var(--gray-9);
+  --color-text-disabled: var(--gray-8);
+
+  /* Primary colors (cyan) */
+  --color-primary: var(--cyan-9);
+  --color-primary-hover: var(--cyan-10);
+  --color-primary-active: var(--cyan-11);
+  --color-primary-light: var(--cyan-3);
+  --color-primary-contrast: white;
+
+  /* Interactive states */
+  --color-focus-ring: var(--cyan-a8);
+  --color-selection: var(--cyan-a3);
+}
+
+/* ===== DARK MODE ===== */
+.dark {
+  /* Dark mode gray scale */
+  --gray-1: #111111;
+  --gray-2: #191919;
+  --gray-3: #222222;
+  --gray-4: #2a2a2a;
+  --gray-5: #313131;
+  --gray-6: #3a3a3a;
+  --gray-7: #484848;
+  --gray-8: #606060;
+  --gray-9: #6e6e6e;
+  --gray-10: #7b7b7b;
+  --gray-11: #b4b4b4;
+  --gray-12: #eeeeee;
+
+  /* Dark mode alpha variants for gray */
+  --gray-a1: rgba(255, 255, 255, 0.012);
+  --gray-a2: rgba(255, 255, 255, 0.032);
+  --gray-a3: rgba(255, 255, 255, 0.071);
+  --gray-a4: rgba(255, 255, 255, 0.114);
+  --gray-a5: rgba(255, 255, 255, 0.141);
+  --gray-a6: rgba(255, 255, 255, 0.176);
+  --gray-a7: rgba(255, 255, 255, 0.235);
+  --gray-a8: rgba(255, 255, 255, 0.322);
+  --gray-a9: rgba(255, 255, 255, 0.369);
+  --gray-a10: rgba(255, 255, 255, 0.424);
+  --gray-a11: rgba(255, 255, 255, 0.678);
+  --gray-a12: rgba(255, 255, 255, 0.926);
+
+  /* Dark mode cyan scale */
+  --cyan-1: #0b161a;
+  --cyan-2: #101b20;
+  --cyan-3: #082329;
+  --cyan-4: #022c36;
+  --cyan-5: #003843;
+  --cyan-6: #004750;
+  --cyan-7: #005b63;
+  --cyan-8: #00737d;
+  --cyan-9: #05a2c2;
+  --cyan-10: #00bcd4;
+  --cyan-11: #24d2e7;
+  --cyan-12: #b6ecf7;
+
+  /* Dark mode alpha variants for cyan */
+  --cyan-a1: rgba(5, 162, 194, 0.059);
+  --cyan-a2: rgba(5, 162, 194, 0.086);
+  --cyan-a3: rgba(5, 162, 194, 0.169);
+  --cyan-a4: rgba(5, 162, 194, 0.243);
+  --cyan-a5: rgba(5, 162, 194, 0.310);
+  --cyan-a6: rgba(5, 162, 194, 0.384);
+  --cyan-a7: rgba(5, 162, 194, 0.475);
+  --cyan-a8: rgba(5, 162, 194, 0.588);
+  --cyan-a9: rgba(5, 162, 194, 0.757);
+  --cyan-a10: rgba(0, 188, 212, 0.827);
+  --cyan-a11: rgba(36, 210, 231, 0.902);
+  --cyan-a12: rgba(182, 236, 247, 0.969);
+
+  /* Override semantic colors for dark mode */
+  --color-background: var(--gray-1);
+  --color-surface: var(--gray-2);
+  --color-surface-hover: var(--gray-3);
+  
+  --color-border: var(--gray-6);
+  --color-border-hover: var(--gray-7);
+  --color-border-focus: var(--cyan-8);
+
+  --color-text-primary: var(--gray-12);
+  --color-text-secondary: var(--gray-11);
+  --color-text-tertiary: var(--gray-9);
+  --color-text-disabled: var(--gray-8);
+
+  --color-primary: var(--cyan-9);
+  --color-primary-hover: var(--cyan-10);
+  --color-primary-active: var(--cyan-11);
+  --color-primary-light: var(--cyan-3);
+  --color-primary-contrast: var(--gray-1);
+
+  --color-focus-ring: var(--cyan-a8);
+  --color-selection: var(--cyan-a3);
+}
+
+/* ===== USAGE EXAMPLES ===== */
+/* Example usage in your CSS:
+
+.button {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+  border: 1px solid var(--color-border);
+}
+
+.button:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-border-hover);
+}
+
+.button:focus {
+  outline: 2px solid var(--color-focus-ring);
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.surface {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+*/ 
