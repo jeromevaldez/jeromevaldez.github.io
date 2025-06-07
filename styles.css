@@ -346,6 +346,24 @@ table tbody tr:last-of-type {
     margin-bottom: 40px; /* add vertical space */
 }
 
+.content a {
+    color: var(--cyan-11, #0c7792);
+    text-decoration: underline;
+}
+
+.content a:visited {
+    color: var(--cyan-11, #0c7792);
+}
+
+.content a:hover {
+    color: var(--cyan-10, #0894b3);
+    text-decoration: none;
+}
+
+.content a:active {
+    color: var(--cyan-11, #0c7792);
+}
+
 .sub-content {
     margin-bottom: 20px; /* add vertical space between sub-sections */
 }
