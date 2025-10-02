@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(-45deg, #e6d9ff, #d4c2ff, #c8b3ff, #f0ebff, #f8f4ff);
+            background-size: 400% 400%;
+            animation: organicFlow 20s linear infinite;
+            padding: 2rem 2rem;
+            font-size: clamp(1.2rem, 2.5vw, 2rem);
+            min-height: 100vh;
+        }
+
+        @keyframes organicFlow {
+            0% { background-position: 0% 20%; }
+            12% { background-position: 80% 80%; }
+            25% { background-position: 20% 100%; }
+            37% { background-position: 100% 30%; }
+            50% { background-position: 40% 70%; }
+            63% { background-position: 70% 10%; }
+            75% { background-position: 10% 90%; }
+            87% { background-position: 90% 40%; }
+            100% { background-position: 0% 20%; }
+        }
+
+        .container {
+            /* max-width: 1400px; */
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: start;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            margin-top: 3rem;
+            line-height: 1.3;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0.1em;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.2em;
+            line-height: 1;
+        }
+
+        .left-column {
+            padding-right: 2rem;
+        }
+
+        .right-column {
+            padding-left: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 2rem;
+            }
+            
+            .container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .left-column,
+            .right-column {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <h2>About me</h2>
+            <ul>
+                <li>I love building stuff</li>
+                <li>I love shipping stuff. I would prefer to ship imperfect things more often vs shipping more perfect things less often.</li>
+                <li>I love learning new things</li>
+                <li>I believe teaching others is one of the best methods to learn (hence, this)</li>
+                <li>I fear irrelevance</li>
+                <li>I am an optimist and a pragmatist</li>
+                <li>I believe UX is <strong>not</strong> fine art. It is <strong>not</strong> artisanal. And yet I love fine art and artisanal things.</li>
+                <li>This is not my day job. I lead Product Design at Plotly.</li>
+                <li>I have a wife, 3 daughters (20yr old + 18yr old twins), and a dog named Max</li>
+            </ul>
+        </div>
+        
+        <div class="right-column">
+            <h2>What we will focus on today</h2>
+            <ul>
+                <li>Building a demo project</li>
+                <li>Your questions</li>
+                <li>Some tools I've experimented with</li>
+                <li>Tips that have worked for me in the past</li>
+                <li>Lessons learned</li>
+            </ul>
+            
+            <h2>What we won't focus on today</h2>
+            <ul>
+                <li>Debates about AI morality</li>
+                <li>How to influence your organization to use (or not use) AI</li>
+                <li>Will AI make us immortal or are we f**d?</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 
