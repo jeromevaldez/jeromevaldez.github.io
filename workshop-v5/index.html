@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workshop V4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+            background: white;
+            font-size: calc(1rem + 0.5vw);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 95vw;
+            margin: 0 auto;
+            padding: 0 2vw;
+        }
+
+        .slide {
+            min-height: 100vh;
+            padding: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide-header {
+            position: sticky;
+            top: 0;
+            background: rgb(240, 243, 255);
+            backdrop-filter: blur(15px);
+            z-index: 100;
+            padding: 1rem 4vw;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(102, 126, 234, 0.15);
+            width: 100%;
+        }
+
+        .slide-header h1,
+        .slide-header h2 {
+            margin: 0;
+            color: #5a6c7d;
+        }
+
+        .slide-header h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .slide-header h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .slide-content-body {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            margin: 0 4vw 4vh 4vw;
+            padding: 3rem 4vw;
+            border-radius: 20px;
+            box-shadow: none;
+            flex: 1;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Title slide special styling */
+        .title-slide {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title-slide .slide-header {
+            position: static;
+            background: rgb(240, 243, 255);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 0 4vw;
+            text-align: center;
+            border-bottom: none;
+        }
+
+        .title-slide .slide-content-body {
+            background: transparent;
+            box-shadow: none;
+            backdrop-filter: none;
+            margin: 2rem 4vw 0 4vw;
+            padding: 0;
+        }
+
+        h3 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 500;
+            color: #34495e;
+            margin-bottom: 1.5rem;
+            margin-top: 2rem;
+            line-height: 1.3;
+        }
+
+        p, li {
+            font-size: clamp(1.6rem, 3vw, 2.6rem);
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        ul ul {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+
+        li strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Slide numbers */
+        .slide-number {
+            background: none;
+            color: rgba(102, 126, 234, 0.7);
+            padding: 0;
+            border-radius: 0;
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            font-weight: 500;
+            text-align: center;
+            position: absolute;
+            top: 2rem;
+            right: 4vw;
+            z-index: 101;
+        }
+
+        /* Better spacing for classroom presentation */
+        .slide-content-body ul li {
+            padding: 0.5rem 0;
+        }
+
+        /* Make nested lists more readable */
+        .slide-content-body ul ul li {
+            font-size: clamp(1.4rem, 2.6vw, 2.4rem);
+            color: #555;
+        }
+
+        /* Special styling for emphasis */
+        em {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 0.3rem 0.6rem;
+            border-radius: 8px;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        /* Phase Cards */
+        .phase-cards {
+            display: flex;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            justify-content: space-between;
+        }
+
+        .phase-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .phase-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.2);
+            border-color: rgba(102, 126, 234, 0.25);
+        }
+
+        .phase-card h4 {
+            font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+            font-weight: 600;
+            color: #667eea;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        /* Quote styling */
+        .quote {
+            font-style: italic;
+            color: #555;
+            font-weight: 400;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .slide-header {
+                padding: 1.5rem 2vw;
+            }
+            
+            .slide-content-body {
+                margin: 0 2vw 2vh 2vw;
+                padding: 2rem;
+            }
+            
+            ul {
+                margin-left: 2rem;
+            }
+            
+            .slide-number {
+                right: 2vw;
+            }
+
+            .phase-cards {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .phase-card {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Title -->
+    <div class="slide title-slide">
+        <div class="slide-header">
+            <h1>AI Workshop V4</h1>
+        </div>
+        <div class="slide-content-body">
+            <!-- <p style="text-align: center; font-size: 1.3rem; color: #666; font-style: italic;">
+                A practical guide to getting started with AI development tools
+            </p> -->
+        </div>
+    </div>
+
+    <!-- Slide 2: My Background -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">2/16</div>
+            <h2>My recent AI background</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li>I started really digging into these tools only a few months ago (January 2025). So I am probably only half a step in front of you. And you're probably steps ahead of me in some of this stuff.</li>
+                <li>I work for Plotly. We are building AI-powered products for Data Scientists/Analysts. We are all required to use AI in our jobs, so I don't need to convince people to let me use the tools.</li>
+                <li>We designers at Plotly started by using AI to build prototypes. But then we were allowed to contribute to the real codebase in April, 2025. Now we are using AI agents to design and code and do pull requests that actually get merged and make it into the product.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 3: What we're going to do -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">3/16</div>
+            <h2>What we're going to do</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li>We will work through one example of a project from zero to one. I find it useful to think about these phases in a project:
+                    <div class="phase-cards">
+                        <div class="phase-card">
+                            <h4>Plan</h4>
+                        </div>
+                        <div class="phase-card">
+                            <h4>Setup</h4>
+                        </div>
+                        <div class="phase-card">
+                            <h4>Refine</h4>
+                        </div>
+                        <div class="phase-card">
+                            <h4>Share</h4>
+                        </div>
+                    </div>
+                </li>
+                <li>I will highlight lessons and techniques along the way while we work through that project</li>
+                <li>I will show how some other tools work.</li>
+                <li>I will share some sources I follow to try to keep up with AI news.</li>
+                <li>We will address questions during and at the end using Slido. 💡&nbsp;</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 4: Plan -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">4/16</div>
+            <h2>Plan</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li><strong>Use the agent to help write a requirements document. I usually do this as a markdown file since AI agents understand markdown well.</strong>💡</li>
+                <li><strong class="quote">"Don't code yet, just gimme your plan"</strong> 💡
+                    <ul>
+                        <li class="quote">I like parts of this plan but not this part</li>
+                        <li class="quote">Why did you include this point? Change it. Now show me your revised plan.</li>
+                    </ul>
+                </li>
+                <li><strong>Next...</strong></li>
+            </ul>
+            <div class="phase-cards">
+                <div class="phase-card">
+                    <h4>Plan</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Setup</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Refine</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Share</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Setup -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">5/16</div>
+            <h2>Setup</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li><strong>Set up your tech stack</strong> 💡</li>
+                <li><strong>Set up a design system</strong>
+                    <ul>
+                        <li>Use a tokens.css file. You can get this from Figma if you're using a design system there.</li>
+                        <li>Ask your dev team for your design system, ideally clone their repo and use that as your design system.</li>
+                        <li>Or... ask the agent to help you set up a design system. I've reverse engineered one from screenshots in the past. 💡</li>
+                        <li> Here is what I often use: <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>, <a href="https://www.radix-ui.com/" target="_blank">Radix UI</a> or <a href="https://ui.shadcn.com/" target="_blank">Shadcn</a> or <a href="https://elastic.github.io/eui/" target="_blank">Elastic UI</a>, <a href="https://phosphoricons.com/" target="_blank">Phosphor icons</a></li>
+                    </ul>
+                </li>
+                <li><strong>Set up GitHub</strong> 💡</li>
+                <li><strong>I like to start with Hello World</strong>
+                    <ul>
+                        <li class="quote">I would like you to build me a simple Hello World page to start this project off just to prove that our tech stack is working. The tech stack you can use and the specifications are in this document @techstack.md in the requirements folder. If you have any questions or need more detail before you start implementing, you can go ahead and ask me, but don't ask them all at once. Please ask the questions one at a time.</li>
+                    </ul>
+                </li>
+                <li><strong>Next...</strong></li>
+            </ul>
+            <div class="phase-cards">
+                <div class="phase-card">
+                    <h4>Plan</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Setup</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Refine</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Share</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Refine -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">6/16</div>
+            <h2>Refine</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li><strong class="quote">I want you to help me think through some options to enable users to do this … give me some options with pros and cons and your recommendation</strong> 💡</li>
+                <li><strong class="quote">I want to do X. I think it happens like Y. Ask me questions until you have enough to start implementing.</strong> 💡</li>
+                <li><strong>Just like the Plan phase, you will think through smaller plans here for added refinemens and features, mixing and matching options as you think through them</strong></li>
+                <li><strong>I often use voice instead of typing.</a></strong> 💡</li>
+                <li><strong>Next...</strong></li>
+            </ul>
+            <div class="phase-cards">
+                <div class="phase-card">
+                    <h4>Plan</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Setup</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Refine</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Share</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Share -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">7/16</div>
+            <h2>Share</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li><strong>I typically use Vercel to share prototypes. My setup is to automatically deploy when I push changes to GitHub</strong> 💡</li>
+                <li><strong>Sharing and getting feedback means you get to refine (and plan) again</strong></li>
+                <li><strong>I sometimes copy/paste feedback from Slack into my agent to help adjust my prototype to the feedback</strong> 💡</li>
+                <li><strong>Some sharing features are included in the tools, or you can use <a href="https://vercel.com/" target="_blank">Vercel</a>, or <a href="https://www.netlify.com/" target="_blank">Netlify</a>, etc.</strong> 💡</li>
+                <li><strong>And we're here...</strong></li>
+            </ul>
+            <div class="phase-cards">
+                <div class="phase-card">
+                    <h4>Plan</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Setup</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Refine</h4>
+                </div>
+                <div class="phase-card">
+                    <h4>Share</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Lessons Learned -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">8/16</div>
+            <h2>Lessons learned so far</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li><strong>Agents love writing code</strong>
+                    <ul>
+                        <li>So sometimes I have asked the agents to try fixing the problem by removing code instead of writing more.</li>
+                    </ul>
+                </li>
+                <li><strong>Agents want to please you soooo badly</strong></li>
+                <li><strong>Agents don't always 'see' UI/UX very well</strong>
+                    <ul>
+                        <li>This means you can paste screenshots but results may vary</li>
+                        <li>Some tools use Figma connectors (e.g. Figma MCP), but my results have been mixed and mostly disappointing.</li>
+                    </ul>
+                </li>
+                <li><strong>Agents know surprisingly little about themselves and the products in which they live</strong></li>
+                <li><strong>Patience is important</strong></li>
+                <li><strong>Grammar is not important</strong> 💡</li>
+                <li><strong>Sometimes I feel like I'm a copy/paste monkey</strong></li>
+                <li><strong>Don't fear the undo, even deep into a conversation</strong> 💡
+                    <ul>
+                        <li>Asking the agents to undo isn't as clean as manually clicking to undo</li>
+                    </ul>
+                </li>
+                <li><strong><a href="https://github.com/" target="_blank">GitHub</a> version control helps with the fear or losing work</strong>
+                    <ul>
+                        <li>Do small commits vs doing a ton of changes in one large commit. It's easier to find and easier to roll back to a specific branch/feature 💡</li>
+                    </ul>
+                </li>
+                <li><strong>Use multiple monitors. Use all the pixels. Use multiple windows.</strong></li>
+                <li><strong>I prefer tools that work in my local files and folders</strong>
+                    <ul>
+                        <li>Because I can point to other folders with relative paths and it can 'read' those other projects and bring those designs into the current project 💡</li>
+                        <li>Because it feels faster</li>
+                        <li>Because there are other tools I can use locally to manipulate those files and folders</li>
+                    </ul>
+                </li>
+                <li><strong>Use multiple tools and multiple models</strong>
+                    <ul>
+                        <li>Different models are better at some things</li>
+                        <li>Sometimes using the same model in a different UI/context actually works</li>
+                        <li>Sometimes I use one agent to help me use another agent. For example, I might have ChatGPT open to help me with using Claude Code inside Cursor.</li>
+                        <li>I have used ChatGPT to help me think through an idea and build a rather large prompt or a requirements document as a markdown file. I then put that .md file into my project folder and ask the agent to build according to that file. 💡</li>
+                    </ul>
+                </li>
+                <li><strong>Experiment with as much as you can</strong>
+                    <ul>
+                        <li>Free tiers are pretty generous</li>
+                        <li>Paying for a month or the first set of credits is very enlightening and doesn't have to be permanent. I have tried and quit several subscriptions.</li>
+                        <li>Maybe consider keeping track of all the tools and which logins you used and which ones you are still paying for or have cancelled 💡
+                            <ul>
+                                <li>Sometimes I login with Google</li>
+                                <li>I login with Github when the product allows it because I am more likely to try out version control with the product if I stay on it for a while</li>
+                            </ul>
+                        </li>
+                        <li><strong>Nobody really knows this stuff. So just dive in. Learn. Maybe even teach. And have fun.</strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 9: Tools I've Tried -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">9/16</div>
+            <h2>Tools I have tried</h2>
+        </div>
+        <div class="slide-content-body">
+            <p>Here is a rough timeline of when I started using each tool:</p>
+            <div style="margin-bottom: 2rem; text-align: center;">
+                <img src="AI-tools-timeline.png" alt="AI Tools Timeline" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+            </div>
+            <ul>
+                <li>Learning these tools isn't free - it takes time. But probably not as much time as you fear.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 10: Non-IDE Tools -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">10/16</div>
+            <h2>Tools that are not IDEs</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li><strong><a href="https://openai.com/" target="_blank">Chat GPT</a></strong> - Excellent for general use 💡</li>
+                <li><strong><a href="https://www.perplexity.ai" target="_blank">Perplexity</a></strong> 💡</li>
+                <li><strong><a href="https://claude.ai" target="_blank">Claude Desktop</a></strong> 💡</li>
+                <li><strong><a href="https://gemini.google.com/" target="_blank">Gemini</a></strong></li>
+                <li><strong><a href="https://www.diabrowser.com/" target="_blank">Dia Browser</a></strong> 💡</li>
+                <li><strong><a href="https://comet.perplexity.ai/" target="_blank">Perplexity Comet browser</a></strong> 💡</li>
+                <li><strong><a href="https://chatgpt.com/atlas/" target="_blank">ChatGPT Atlas browser</a></strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 11: Tool Settings -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">11/16</div>
+            <h2>Tool settings that help</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li><strong><a href="https://docs.anthropic.com/en/docs/claude-code/memory" target="_blank">CLAUDE.md</a> and <a href="https://agents.md/" target="_blank">Agents.md</a></strong> 💡</li>
+                <li><strong>Settings/Preferences for most of the popular tools. Here are some examples I have used in the past:</strong>
+                    <ul>
+                        <li><em>I am a UX Designer, so explain technical concepts to me in a simplified way to help me learn</em></li>
+                        <li><em>Don't use any components outside of this folder "plotly-components"</em></li>
+                        <li><em>Ask my permission before you try doing anything that breaks these rules</em></li>
+                    </ul>
+                </li>
+                <li>We run a check against our custom rules before we do a Pull Request or before we deploy our UX prototypes to a server. 💡
+                    <ul>
+                        <li><em>Go check this AI_RULES.md document to see if your recent changes violated any of these rules. And if so, propose how you'll fix this.</em></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 10: Fast Moving Space - COMMENTED OUT FOR NOW -->
+    <!--
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">12/16</div>
+            <h2>Things sure do move fast</h2>
+        </div>
+        <div class="slide-content-body">
+            <p><strong>Since I posted this event (10 days ago!)…</strong></p>
+            <ul>
+                <li><a href="https://hackathon.dev/" target="_blank">Bolt Hackathon</a> started</li>
+                <li>Lovable announced their <a href="https://shipped.lovable.app" target="_blank">"Shipped" promo</a>. I don't know what this is yet. Looks neat.</li>
+                <li><a href="https://www.perplexity.ai/page/perplexity-labs-launches-with-z7sHs7TaSBaUQvPdzbSqaw" target="_blank">Perplexity Labs announcement of Pro AI suite</a></li>
+                <li>Claude 4 was released</li>
+                <li>V0 released a web Dev model</li>
+                <li>Replit added Claude 4 Sonnet</li>
+                <li>Google I/O announcements</li>
+                <li>OpenAI bought Jonny Ive's company</li>
+            </ul>
+            <p><strong>It's exhilarating and exhausting. So don't stay still. Open yourself up to learning while this space is frantic. What's the alternative? If this sounds a little like fear, it kind of is.</strong></p>
+        </div>
+    </div>
+    -->
+
+    <!-- Slide 12: Sources -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">12/16</div>
+            <h2>Sources I follow</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li><a href="https://every.to/" target="_blank">Every</a></li>
+                <li><a href="https://www.youtube.com/@LennysPodcast" target="_blank">Lenny's Podcast</a></li>
+                <li><a href="https://www.youtube.com/@howiaipodcast" target="_blank">How I AI</a></li>
+                <li><a href="https://www.youtube.com/@GregIsenberg/featured" target="_blank">Startup Ideas Podcast</a></li>
+                <li><a href="https://www.youtube.com/@Fireship" target="_blank">Fireship</a></li>
+                <li><a href="https://aisecret.us/" target="_blank">AI Secret Newsletter</a></li>
+                <li>The model and tool companies: OpenAI, Anthropic, Google, Cursor, etc
+                    <ul><li>Any interviews with their execs and senior staff</li></ul>
+                </li>
+                <li><a href="https://www.youtube.com/@ycombinator" target="_blank">Y Combinator</a></li>
+                <li><a href="https://a16z.com/podcasts/a16z-podcast/" target="_blank">A16Z</a></li>
+            </ul>
+            <p><strong>It's exhilarating and exhausting. So don't stay still. Open yourself up to learning while this space is frantic. What's the alternative? If this sounds a little like fear, it kind of is.</strong></p>
+
+        </div>
+    </div>
+
+    <!-- Slide 13: Want to Learn -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">13/16</div>
+            <h2>Advanced topics if we have time and interest</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li>MCPs - Model Context Protocol</li>
+                <li>Claude Code slash commands</li>
+                <li>Github Worktrees</li>
+                <li>Claude Code sub-agents</li>
+                <li>I want to go back and retry the tools that I haven't tried in a while. (e.g. Lovable, Replit, Bolt)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 14: Review Questions -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">14/16</div>
+            <h2>Let's review your questions</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li>Any Slido questions we haven't covered yet?</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 15: What we just did -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">15/16</div>
+            <h2>What we just did</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li>We worked through one example of a project from zero to one
+                    <div class="phase-cards">
+                        <div class="phase-card">
+                            <h4>Plan</h4>
+                        </div>
+                        <div class="phase-card">
+                            <h4>Setup</h4>
+                        </div>
+                        <div class="phase-card">
+                            <h4>Refine</h4>
+                        </div>
+                        <div class="phase-card">
+                            <h4>Share</h4>
+                        </div>
+                    </div>
+                </li>
+                <li>I highlighted lessons and techniques along the way while we worked through that project</li>
+                <li>I showed how some other tools work.</li>
+                <li>I shared some sources I follow to try to keep up with AI news.</li>
+                <li>I addressed your specific questions</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 16: Future Topics -->
+    <div class="slide">
+        <div class="slide-header">
+            <div class="slide-number">16/16</div>
+            <h2>Parting thoughts</h2>
+        </div>
+        <div class="slide-content-body">
+            <ul>
+                <li>It's not an all or nothing process</li>
+                <li>You, the human, are still accountable</li>
+                <li>We have changed tools before and we can change tools again</li>
+                <li>You can make learning fun if you stay curious</li>
+            </ul>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(102, 126, 234, 0.1); border-radius: 15px;">
+                <h3 style="color: #667eea;">Thank You!<br />Questions or comments?</h3>
+                
+            </div>
+            
+            <!-- <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: rgba(102, 126, 234, 0.1); border-radius: 15px;">
+                <p style="color: #667eea; font-weight: 600; margin-bottom: 1.5rem; font-size: clamp(1.4rem, 2.5vw, 2.2rem);">
+                    📹 Workshop Recording
+                </p>
+                <div style="position: relative; width: 100%; max-width: 800px; margin: 0 auto; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
+                    <iframe 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                        src="https://www.youtube.com/embed/Ql35QOTEU7M" 
+                        title="AI for UX Designers Workshop" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+</body>
+</html> 
