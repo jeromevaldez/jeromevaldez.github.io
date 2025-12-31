@@ -300,10 +300,11 @@ body {
     
     /* Convert each row to a card */
     table tbody tr {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
         background-color: #ffffff;
         padding: 14px;
-        position: relative;
     }
     
     table tbody tr:nth-of-type(even) {
@@ -320,55 +321,51 @@ body {
         overflow-wrap: break-word;
     }
     
-    /* Track number + Song title (first two columns combined visually) */
+    /* Track number */
     table tbody td:nth-child(1) {
-        display: inline;
+        order: 1;
         font-weight: 700;
         font-size: 0.9em;
         color: #607d8b;
     }
-    
+
     table tbody td:nth-child(1)::after {
-        content: ". ";
+        content: ".\00a0";
     }
-    
-    /* Song title - bold and prominent */
+
+    /* Song title */
     table tbody td:nth-child(2) {
-        display: inline;
+        order: 2;
         font-weight: 700;
         font-size: 1.05em;
         color: #333;
     }
-    
+
+    /* Time - after title */
+    table tbody td:nth-child(5) {
+        order: 3;
+        font-size: 0.8em;
+        color: #999;
+        margin-left: 8px;
+    }
+
     /* Artist */
     table tbody td:nth-child(3) {
-        display: block;
+        order: 4;
+        width: 100%;
         margin-top: 6px;
         font-size: 0.9em;
         color: #555;
     }
-    
-    table tbody td:nth-child(3)::before {
-        content: "";
-    }
-    
-    /* Album - muted color for hierarchy */
+
+    /* Album */
     table tbody td:nth-child(4) {
-        display: block;
+        order: 5;
+        width: 100%;
         font-size: 0.85em;
         color: #888;
         font-style: italic;
         margin-top: 2px;
-    }
-    
-    /* Time - small and right-aligned */
-    table tbody td:nth-child(5) {
-        position: absolute;
-        top: 14px;
-        right: 14px;
-        font-size: 0.8em;
-        color: #999;
-        padding: 0;
     }
 }
 
