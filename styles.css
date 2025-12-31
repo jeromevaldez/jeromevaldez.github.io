@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', Arial, sans-serif;
+    background-color: #ffffff;
 }
 
 /* Left Navigation Styles */
@@ -264,8 +265,102 @@ body {
     }
     
     .container {
-        margin: 0 15px;
+        margin: 0 auto;
         padding: 15px;
+        max-width: calc(100% - 30px); /* Equal 15px space on each side */
+    }
+    
+    /* Mobile Card Layout for Tables */
+    table {
+        min-width: unset; /* Remove fixed min-width on mobile */
+        width: 100%;
+        margin: 20px auto; /* Center the table */
+        box-shadow: none; /* Remove table shadow, cards will have their own */
+        background: transparent;
+    }
+    
+    /* Hide table header on mobile */
+    table thead {
+        display: none;
+    }
+    
+    /* Reset tbody display */
+    table tbody {
+        display: block;
+    }
+    
+    /* Convert each row to a card */
+    table tbody tr {
+        display: block;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 12px;
+        padding: 14px;
+        position: relative;
+    }
+    
+    table tbody tr:nth-of-type(even) {
+        background-color: #ffffff; /* Override alternating colors for cards */
+    }
+    
+    /* Stack all cells vertically */
+    table tbody td {
+        display: block;
+        padding: 2px 0;
+        text-align: left;
+        border: none;
+    }
+    
+    /* Track number + Song title (first two columns combined visually) */
+    table tbody td:nth-child(1) {
+        display: inline;
+        font-weight: 700;
+        font-size: 0.9em;
+        color: #607d8b;
+    }
+    
+    table tbody td:nth-child(1)::after {
+        content: ". ";
+    }
+    
+    /* Song title - bold and prominent */
+    table tbody td:nth-child(2) {
+        display: inline;
+        font-weight: 700;
+        font-size: 1.05em;
+        color: #333;
+    }
+    
+    /* Artist */
+    table tbody td:nth-child(3) {
+        display: block;
+        margin-top: 6px;
+        font-size: 0.9em;
+        color: #555;
+    }
+    
+    table tbody td:nth-child(3)::before {
+        content: "";
+    }
+    
+    /* Album - muted color for hierarchy */
+    table tbody td:nth-child(4) {
+        display: block;
+        font-size: 0.85em;
+        color: #888;
+        font-style: italic;
+        margin-top: 2px;
+    }
+    
+    /* Time - small and right-aligned */
+    table tbody td:nth-child(5) {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        font-size: 0.8em;
+        color: #999;
+        padding: 0;
     }
 }
 
