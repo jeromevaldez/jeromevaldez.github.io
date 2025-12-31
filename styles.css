@@ -199,6 +199,10 @@ body {
         font-size: 0.8em;
         padding: 4px 8px;
     }
+    
+    table {
+        box-shadow: none;
+    }
 }
 
 /* Mobile responsive adjustments */
@@ -265,9 +269,10 @@ body {
     }
     
     .container {
-        margin: 0 auto;
+        margin: 0;
         padding: 15px;
-        max-width: calc(100% - 30px); /* Equal 15px space on each side */
+        box-sizing: border-box;
+        width: 100%;
     }
     
     /* Mobile Card Layout for Tables */
@@ -389,9 +394,9 @@ h1 {
 }
 
 .container {
-    margin: 0 20px;
+    margin: 0 auto;
     max-width: 1200px;
-    padding: 20px;
+    padding: 20px 0;
     box-sizing: border-box;
 }
 
@@ -410,7 +415,7 @@ table {
     font-size: 1em;
     font-family: 'Inter', Arial, sans-serif;
     min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: none;
     border: none; /* remove table border */
 }
 
