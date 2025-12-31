@@ -396,7 +396,7 @@ h1 {
 .container {
     margin: 0 auto;
     max-width: 1200px;
-    padding: 20px 0;
+    padding: 20px 8px;
     box-sizing: border-box;
 }
 
