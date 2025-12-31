@@ -486,13 +486,27 @@ table tbody tr:last-of-type {
     margin-bottom: 20px; /* add vertical space between sub-sections */
 }
 
-/* Playlist header - title and link on same line */
+/* Playlist section - container for sticky header behavior */
+.playlist-section {
+    margin-bottom: 60px;
+}
+
+.playlist-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Playlist header - sticky section header */
 .playlist-header {
     display: flex;
     align-items: baseline;
     gap: 16px;
     flex-wrap: wrap;
     margin-bottom: 0;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    padding: 16px 0;
+    z-index: 10;
 }
 
 .playlist-header h2 {
