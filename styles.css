@@ -265,6 +265,8 @@ body {
     header {
         padding: 20px 15px 15px 80px; /* Left padding to make room for hamburger */
         text-align: left; /* Align text to left since we have left padding */
+        box-sizing: border-box;
+        width: 100%;
     }
     
     header h1 {
@@ -330,6 +332,7 @@ body {
     table tbody td:nth-child(2) {
         order: 2;
         width: 100%;
+        min-width: 0;
         font-weight: 700;
         font-size: 1.05em;
         color: #333;
