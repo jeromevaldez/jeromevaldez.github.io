@@ -207,6 +207,10 @@ body {
 
 /* Mobile responsive adjustments */
 @media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+
     /* Show mobile hamburger button */
     .mobile-menu-toggle {
         display: block;
@@ -315,6 +319,8 @@ body {
         padding: 2px 0;
         text-align: left;
         border: none;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
     
     /* Track number + Song title (first two columns combined visually) */
