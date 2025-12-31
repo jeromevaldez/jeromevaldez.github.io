@@ -263,8 +263,7 @@ body {
     
     /* Make header more mobile-friendly */
     header {
-        padding: 20px 15px 15px 80px; /* Left padding to make room for hamburger */
-        text-align: left; /* Align text to left since we have left padding */
+        padding: 15px 50px;
         box-sizing: border-box;
         width: 100%;
     }
@@ -272,6 +271,11 @@ body {
     header h1 {
         font-size: 1.5em !important;
         margin: 0;
+    }
+    
+    .home-icon {
+        left: 15px;
+        font-size: 1.3em;
     }
     
     .container {
@@ -368,10 +372,27 @@ body {
 }
 
 header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     background-color: #f8f9fa;
-    position: relative; /* add relative positioning */
+    position: relative;
+}
+
+.home-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.home-icon:hover {
+    color: var(--cyan-11, #0c7792);
 }
 
 h1 {
@@ -412,7 +433,6 @@ table {
     margin: 20px 0;
     font-size: 1em;
     font-family: 'Inter', Arial, sans-serif;
-    min-width: 400px;
     box-shadow: none;
     border: none; /* remove table border */
 }
@@ -464,4 +484,28 @@ table tbody tr:last-of-type {
 
 .sub-content {
     margin-bottom: 20px; /* add vertical space between sub-sections */
+}
+
+/* Playlist header - title and link on same line */
+.playlist-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+.playlist-header h2 {
+    margin: 0;
+}
+
+.playlist-link {
+    font-size: 0.9em;
+    color: var(--cyan-11, #0c7792);
+    text-decoration: underline;
+}
+
+.playlist-link:hover {
+    color: var(--cyan-10, #0894b3);
+    text-decoration: none;
 }
