@@ -321,32 +321,27 @@ body {
         overflow-wrap: break-word;
     }
     
-    /* Track number */
+    /* Track number - hidden on mobile */
     table tbody td:nth-child(1) {
-        order: 1;
-        font-weight: 700;
-        font-size: 0.9em;
-        color: #607d8b;
-    }
-
-    table tbody td:nth-child(1)::after {
-        content: ".\00a0";
+        display: none;
     }
 
     /* Song title */
     table tbody td:nth-child(2) {
         order: 2;
+        width: 100%;
         font-weight: 700;
         font-size: 1.05em;
         color: #333;
     }
 
-    /* Time - after title */
+    /* Time - last line in card */
     table tbody td:nth-child(5) {
-        order: 3;
+        order: 6;
+        width: 100%;
         font-size: 0.8em;
         color: #999;
-        margin-left: 8px;
+        margin-top: 4px;
     }
 
     /* Artist */
